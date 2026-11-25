@@ -1,0 +1,1197 @@
+/* ==========================================================================
+   SmartInovaT — Interactive Data Visualization & SVG Infographics Suite
+   File: assets/css/infographics.css
+   Supports: Dark Mode (default Obsidian/Titanium) & Light Mode ([data-theme="light"])
+   ========================================================================== */
+
+:root {
+  /* Base Surface & Ink Tokens (Synced with main.css) */
+  --si-bg-void: var(--bg-void, #06080d);
+  --si-bg-obsidian: var(--bg-obsidian, #0b0f17);
+  --si-bg-surface: var(--bg-surface, #111723);
+  --si-bg-elevated: var(--bg-surface-elevated, #172030);
+  --si-bg-glass: var(--bg-glass, rgba(17, 23, 35, 0.78));
+  --si-border-subtle: var(--border-subtle, rgba(255, 255, 255, 0.08));
+  --si-border-highlight: var(--border-highlight, rgba(255, 255, 255, 0.18));
+  --si-text-primary: var(--text-primary, #f3f6fa);
+  --si-text-metallic: var(--text-metallic, #dce3ec);
+  --si-text-secondary: var(--text-secondary, #9aa6b8);
+  --si-text-muted: var(--text-muted, #687588);
+
+  /* Brand Spectrum */
+  --si-teal: var(--accent-teal, #429a8e);
+  --si-cyan: var(--accent-cyan, #1db7c4);
+  --si-magenta: var(--accent-magenta, #c63368);
+  --si-copper: var(--accent-copper, #db8a50);
+  --si-amber: var(--accent-amber, #eca94c);
+  --si-spectrum: var(
+    --gradient-spectrum,
+    linear-gradient(90deg, #429a8e 0%, #1db7c4 24%, #c63368 56%, #db8a50 80%, #eca94c 100%)
+  );
+
+  /* Component-Level Semantic Surface Tokens (Dark Default) */
+  --si-frame-bg:
+    radial-gradient(1100px 420px at 12% 0%, rgba(29, 183, 196, 0.08), transparent 65%),
+    radial-gradient(900px 380px at 88% 100%, rgba(198, 51, 104, 0.07), transparent 65%),
+    linear-gradient(180deg, rgba(17, 23, 35, 0.95) 0%, rgba(11, 15, 23, 0.98) 100%);
+  --si-frame-shadow: 0 24px 60px rgba(0, 0, 0, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  --si-canvas-bg:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(23, 32, 48, 0.76), rgba(6, 8, 13, 0.95));
+  --si-card-bg: rgba(11, 15, 23, 0.86);
+  --si-card-hover-bg: rgba(23, 32, 48, 0.86);
+  --si-card-active-bg: linear-gradient(180deg, rgba(23, 32, 48, 0.98), rgba(11, 15, 23, 0.95));
+  --si-panel-deep-bg: rgba(6, 8, 13, 0.88);
+  --si-step-box-bg: rgba(17, 23, 35, 0.88);
+  --si-pill-bg: rgba(17, 23, 35, 0.86);
+  --si-pill-active-bg: linear-gradient(135deg, rgba(29, 183, 196, 0.22), rgba(66, 154, 142, 0.16));
+  --si-pill-active-text: #ffffff;
+  --si-pill-num-bg: rgba(255, 255, 255, 0.08);
+  --si-chip-bg: rgba(220, 227, 236, 0.07);
+  --si-chip-border: rgba(220, 227, 236, 0.16);
+  --si-hint-bg: rgba(220, 227, 236, 0.06);
+  --si-btn-bg: rgba(255, 255, 255, 0.05);
+  --si-btn-hover-bg: rgba(255, 255, 255, 0.11);
+  --si-btn-portfolio-bg: rgba(198, 51, 104, 0.14);
+  --si-btn-portfolio-border: rgba(198, 51, 104, 0.44);
+  --si-btn-portfolio-text: #ffdce8;
+  --si-btn-amber-bg: rgba(236, 169, 76, 0.14);
+  --si-btn-amber-border: rgba(236, 169, 76, 0.45);
+  --si-btn-amber-text: #ffe8c2;
+  --si-translation-bg: linear-gradient(90deg, rgba(66, 154, 142, 0.14), rgba(17, 23, 35, 0.85));
+  --si-divider-line: linear-gradient(90deg, transparent, rgba(220, 227, 236, 0.2), transparent);
+  --si-gov-before-label: #f07aa3;
+  --si-gov-after-label: #6fd4c6;
+
+  /* SVG Semantic Palette (Dark Default) */
+  --si-svg-plate: #0b0f17;
+  --si-svg-plate-alt: #0d1420;
+  --si-svg-plate-active: #162235;
+  --si-svg-subbox: rgba(255, 255, 255, 0.045);
+  --si-svg-subbox-active: rgba(255, 255, 255, 0.1);
+  --si-svg-ink-strong: #ffffff;
+  --si-svg-ink-primary: #f3f6fa;
+  --si-svg-ink-metallic: #dce3ec;
+  --si-svg-ink-muted: #9aa6b8;
+  --si-svg-ink-subtle: #8b98ab;
+  --si-svg-rail: rgba(220, 227, 236, 0.18);
+  --si-svg-baseline: rgba(220, 227, 236, 0.28);
+  --si-svg-ring-stroke: rgba(220, 227, 236, 0.35);
+  --si-svg-beam-mid: #ffffff;
+  --si-svg-beam-side: #dce3ec;
+
+  /* Typography & Radii */
+  --si-font-display: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --si-font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --si-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+  --si-radius-lg: 20px;
+  --si-radius-md: 14px;
+  --si-radius-sm: 10px;
+  --si-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Complete Light Mode Theme Override ---------- */
+:root[data-theme="light"] {
+  --si-bg-void: var(--bg-void, #f3f6fb);
+  --si-bg-obsidian: var(--bg-obsidian, #f8fafd);
+  --si-bg-surface: var(--bg-surface, #ffffff);
+  --si-bg-elevated: var(--bg-surface-elevated, #eef3f9);
+  --si-bg-glass: var(--bg-glass, rgba(255, 255, 255, 0.9));
+  --si-border-subtle: var(--border-subtle, rgba(15, 23, 42, 0.1));
+  --si-border-highlight: var(--border-highlight, rgba(15, 23, 42, 0.22));
+  --si-text-primary: var(--text-primary, #0b1220);
+  --si-text-metallic: var(--text-metallic, #1e293b);
+  --si-text-secondary: var(--text-secondary, #475569);
+  --si-text-muted: var(--text-muted, #64748b);
+
+  /* Slightly deeper accent tones where needed for crisp WCAG contrast on white */
+  --si-teal: #237a6f;
+  --si-cyan: #0b8794;
+  --si-magenta: #b82558;
+  --si-copper: #bd6428;
+  --si-amber: #b87414;
+
+  --si-frame-bg:
+    radial-gradient(1100px 420px at 12% 0%, rgba(11, 135, 148, 0.07), transparent 65%),
+    radial-gradient(900px 380px at 88% 100%, rgba(184, 37, 88, 0.06), transparent 65%),
+    linear-gradient(180deg, #ffffff 0%, #f5f8fc 100%);
+  --si-frame-shadow: 0 20px 48px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --si-canvas-bg:
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, #ffffff, #edf2f9);
+  --si-card-bg: #ffffff;
+  --si-card-hover-bg: #f1f5fb;
+  --si-card-active-bg: linear-gradient(180deg, #ffffff, #edf4fb);
+  --si-panel-deep-bg: #f8fafd;
+  --si-step-box-bg: #ffffff;
+  --si-pill-bg: #ffffff;
+  --si-pill-active-bg: linear-gradient(135deg, rgba(11, 135, 148, 0.14), rgba(35, 122, 111, 0.12));
+  --si-pill-active-text: #0b1220;
+  --si-pill-num-bg: rgba(15, 23, 42, 0.07);
+  --si-chip-bg: #eef3f9;
+  --si-chip-border: rgba(15, 23, 42, 0.14);
+  --si-hint-bg: #eef3f9;
+  --si-btn-bg: #ffffff;
+  --si-btn-hover-bg: #eef3f9;
+  --si-btn-portfolio-bg: rgba(184, 37, 88, 0.09);
+  --si-btn-portfolio-border: rgba(184, 37, 88, 0.35);
+  --si-btn-portfolio-text: #961945;
+  --si-btn-amber-bg: rgba(184, 116, 20, 0.1);
+  --si-btn-amber-border: rgba(184, 116, 20, 0.38);
+  --si-btn-amber-text: #855108;
+  --si-translation-bg: linear-gradient(90deg, rgba(35, 122, 111, 0.1), rgba(248, 250, 253, 0.96));
+  --si-divider-line: linear-gradient(90deg, transparent, rgba(15, 23, 42, 0.14), transparent);
+  --si-gov-before-label: #b82558;
+  --si-gov-after-label: #1c7469;
+
+  /* SVG Semantic Palette (Light Mode Precision Blueprint) */
+  --si-svg-plate: #ffffff;
+  --si-svg-plate-alt: #f4f7fc;
+  --si-svg-plate-active: #e8f1fb;
+  --si-svg-subbox: rgba(15, 23, 42, 0.035);
+  --si-svg-subbox-active: rgba(11, 135, 148, 0.09);
+  --si-svg-ink-strong: #0b1220;
+  --si-svg-ink-primary: #0f172a;
+  --si-svg-ink-metallic: #1e293b;
+  --si-svg-ink-muted: #475569;
+  --si-svg-ink-subtle: #526277;
+  --si-svg-rail: rgba(15, 23, 42, 0.14);
+  --si-svg-baseline: rgba(15, 23, 42, 0.24);
+  --si-svg-ring-stroke: rgba(15, 23, 42, 0.28);
+  --si-svg-beam-mid: #475569;
+  --si-svg-beam-side: #94a3b8;
+}
+
+/* ---------- Shared Shell & Chrome ---------- */
+.si-ig-shell {
+  position: relative;
+  width: 100%;
+  color: var(--si-text-primary);
+  font-family: var(--si-font-sans);
+  box-sizing: border-box;
+}
+
+.si-ig-shell *,
+.si-ig-shell *::before,
+.si-ig-shell *::after {
+  box-sizing: border-box;
+}
+
+.si-ig-frame {
+  position: relative;
+  background: var(--si-frame-bg);
+  border: 1px solid var(--si-border-subtle);
+  border-radius: var(--si-radius-lg);
+  padding: clamp(1.25rem, 2.5vw, 2.25rem);
+  overflow: hidden;
+  box-shadow: var(--si-frame-shadow);
+  transition: background 0.25s var(--si-ease), border-color 0.25s var(--si-ease), box-shadow 0.25s var(--si-ease);
+}
+
+.si-ig-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--si-spectrum);
+  opacity: 0.94;
+  pointer-events: none;
+}
+
+.si-ig-frame + .si-ig-frame {
+  margin-top: 2rem;
+}
+
+/* Engineering grid backdrop inside SVG viewports */
+.si-ig-canvas-box {
+  position: relative;
+  background: var(--si-canvas-bg);
+  background-size: 28px 28px, 28px 28px, 100% 100%;
+  border: 1px solid var(--si-border-subtle);
+  border-radius: var(--si-radius-md);
+  padding: clamp(0.75rem, 1.8vw, 1.35rem);
+  overflow: hidden;
+  transition: background 0.25s var(--si-ease), border-color 0.25s var(--si-ease);
+}
+
+.si-ig-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  user-select: none;
+}
+
+/* ---------- Header & Badges ---------- */
+.si-ig-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.si-ig-header-main {
+  max-width: 760px;
+}
+
+.si-ig-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--si-font-mono);
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--eyebrow-color, var(--si-cyan));
+  background: color-mix(in srgb, var(--eyebrow-color, var(--si-cyan)) 11%, transparent);
+  border: 1px solid color-mix(in srgb, var(--eyebrow-color, var(--si-cyan)) 32%, transparent);
+  padding: 0.34rem 0.72rem;
+  border-radius: 999px;
+  margin-bottom: 0.7rem;
+}
+
+.si-ig-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 10px currentColor;
+  animation: siPulseDot 2.4s infinite ease-in-out;
+}
+
+.si-ig-title {
+  font-family: var(--si-font-display);
+  font-size: clamp(1.22rem, 2.1vw, 1.68rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.24;
+  color: var(--si-text-primary);
+  margin: 0 0 0.45rem;
+}
+
+.si-ig-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--si-text-secondary);
+  margin: 0;
+}
+
+.si-ig-helper-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--si-font-mono);
+  font-size: 0.75rem;
+  color: var(--si-text-metallic);
+  background: var(--si-hint-bg);
+  border: 1px solid var(--si-border-subtle);
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ---------- Executive Translation Callout ---------- */
+.si-ig-translation-bar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.85rem 1.1rem;
+  background: var(--si-translation-bg);
+  border: 1px solid color-mix(in srgb, var(--si-teal) 32%, transparent);
+  border-left: 3px solid var(--si-teal);
+  border-radius: var(--si-radius-sm);
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1.35rem;
+}
+
+.si-ig-translation-tag {
+  font-family: var(--si-font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--si-amber);
+  background: color-mix(in srgb, var(--si-amber) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--si-amber) 34%, transparent);
+  padding: 0.28rem 0.62rem;
+  border-radius: 6px;
+}
+
+.si-ig-translation-text {
+  font-size: 0.89rem;
+  line-height: 1.55;
+  color: var(--si-text-metallic);
+  margin: 0;
+}
+
+.si-ig-translation-text strong {
+  color: var(--si-text-primary);
+}
+
+/* ---------- Interactive Selector Pills / Tabs ---------- */
+.si-ig-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1.15rem;
+}
+
+.si-ig-pill {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--si-pill-bg);
+  color: var(--si-text-secondary);
+  border: 1px solid var(--si-border-subtle);
+  border-radius: 999px;
+  padding: 0.52rem 0.95rem;
+  font-family: var(--si-font-sans);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.22s var(--si-ease),
+    color 0.22s var(--si-ease),
+    border-color 0.22s var(--si-ease),
+    transform 0.22s var(--si-ease),
+    box-shadow 0.22s var(--si-ease);
+}
+
+.si-ig-pill:hover {
+  color: var(--si-text-primary);
+  border-color: var(--si-border-highlight);
+  transform: translateY(-1px);
+}
+
+.si-ig-pill:focus-visible {
+  outline: 2px solid var(--si-cyan);
+  outline-offset: 2px;
+}
+
+.si-ig-pill.is-active {
+  color: var(--si-pill-active-text);
+  background: var(--si-pill-active-bg);
+  border-color: var(--pill-accent, var(--si-cyan));
+  box-shadow: 0 4px 16px rgba(29, 183, 196, 0.16);
+}
+
+.si-ig-pill-num {
+  font-family: var(--si-font-mono);
+  font-size: 0.72rem;
+  padding: 0.1rem 0.42rem;
+  border-radius: 999px;
+  background: var(--si-pill-num-bg);
+  color: var(--si-text-metallic);
+}
+
+.si-ig-pill.is-active .si-ig-pill-num {
+  background: var(--pill-accent, var(--si-cyan));
+  color: #ffffff;
+  font-weight: 700;
+}
+
+:root:not([data-theme="light"]) .si-ig-pill.is-active .si-ig-pill-num {
+  color: #06080d;
+}
+
+/* ---------- Buttons & Portfolio / Contact Actions ---------- */
+.si-ig-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.9rem;
+}
+
+.si-ig-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.48rem;
+  font-family: var(--si-font-sans);
+  font-size: 0.83rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.6rem 1rem;
+  border-radius: 9px;
+  border: 1px solid var(--si-border-highlight);
+  background: var(--si-btn-bg);
+  color: var(--si-text-primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s var(--si-ease);
+}
+
+.si-ig-btn:hover {
+  background: var(--si-btn-hover-bg);
+  border-color: var(--si-text-muted);
+  transform: translateY(-1px);
+}
+
+.si-ig-btn:focus-visible {
+  outline: 2px solid var(--si-cyan);
+  outline-offset: 2px;
+}
+
+.si-ig-btn--primary {
+  background: linear-gradient(135deg, #1db7c4 0%, #429a8e 100%);
+  color: #041016;
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(29, 183, 196, 0.24);
+}
+
+.si-ig-btn--primary:hover {
+  background: linear-gradient(135deg, #28c7d4 0%, #4cb0a2 100%);
+  color: #041016;
+  border-color: transparent;
+  box-shadow: 0 10px 28px rgba(29, 183, 196, 0.34);
+}
+
+.si-ig-btn--portfolio {
+  background: var(--si-btn-portfolio-bg);
+  border-color: var(--si-btn-portfolio-border);
+  color: var(--si-btn-portfolio-text);
+}
+
+.si-ig-btn--portfolio:hover {
+  background: color-mix(in srgb, var(--si-magenta) 20%, transparent);
+  border-color: var(--si-magenta);
+  color: var(--si-text-primary);
+}
+
+.si-ig-btn--amber {
+  background: var(--si-btn-amber-bg);
+  border-color: var(--si-btn-amber-border);
+  color: var(--si-btn-amber-text);
+}
+
+.si-ig-btn--amber:hover {
+  background: color-mix(in srgb, var(--si-amber) 22%, transparent);
+  border-color: var(--si-amber);
+  color: var(--si-text-primary);
+}
+
+/* ---------- SVG Animations & Interactive Nodes ---------- */
+@keyframes siPulseDot {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.35); opacity: 0.45; }
+}
+
+@keyframes siFlowDash {
+  to { stroke-dashoffset: -120; }
+}
+
+@keyframes siFlowDashReverse {
+  to { stroke-dashoffset: 120; }
+}
+
+@keyframes siPanelReveal {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.si-svg-flow {
+  stroke-dasharray: 8 10;
+  animation: siFlowDash 3.6s linear infinite;
+}
+
+.si-svg-flow--fast {
+  stroke-dasharray: 6 12;
+  animation: siFlowDash 2.2s linear infinite;
+}
+
+.si-svg-flow--reverse {
+  stroke-dasharray: 7 11;
+  animation: siFlowDashReverse 3.2s linear infinite;
+}
+
+.si-svg-node {
+  cursor: pointer;
+  transition: transform 0.25s var(--si-ease), opacity 0.25s var(--si-ease), filter 0.25s var(--si-ease);
+}
+
+.si-svg-node:focus {
+  outline: none;
+}
+
+.si-svg-node:hover {
+  filter: brightness(1.08);
+}
+
+.si-panel-animate {
+  animation: siPanelReveal 0.28s var(--si-ease);
+}
+
+/* ==========================================================================
+   INFOGRAPHIC 1: #infographic-axes-acatech
+   ========================================================================== */
+
+.si-axes-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.si-detail-card {
+  background: var(--si-card-bg);
+  border: 1px solid var(--si-border-subtle);
+  border-top: 2px solid var(--card-accent, var(--si-cyan));
+  border-radius: var(--si-radius-md);
+  padding: 1.15rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.si-detail-kicker {
+  font-family: var(--si-font-mono);
+  font-size: 0.71rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--card-accent, var(--si-cyan));
+  margin-bottom: 0.5rem;
+}
+
+.si-detail-heading {
+  font-family: var(--si-font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--si-text-primary);
+  margin: 0 0 0.55rem;
+  line-height: 1.35;
+}
+
+.si-detail-body {
+  font-size: 0.89rem;
+  line-height: 1.58;
+  color: var(--si-text-secondary);
+  margin: 0;
+}
+
+.si-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.si-detail-list li {
+  position: relative;
+  padding-left: 1.05rem;
+  font-size: 0.87rem;
+  line-height: 1.5;
+  color: var(--si-text-metallic);
+}
+
+.si-detail-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--card-accent, var(--si-cyan));
+}
+
+.si-section-divider {
+  height: 1px;
+  background: var(--si-divider-line);
+  margin: 2rem 0;
+}
+
+/* ACATECH Staircase Strip */
+.si-acatech-stage-strip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.si-stage-btn {
+  appearance: none;
+  text-align: left;
+  background: var(--si-card-bg);
+  border: 1px solid var(--si-border-subtle);
+  border-radius: var(--si-radius-sm);
+  padding: 0.62rem 0.7rem;
+  cursor: pointer;
+  color: var(--si-text-secondary);
+  transition: all 0.22s var(--si-ease);
+}
+
+.si-stage-btn:hover {
+  background: var(--si-card-hover-bg);
+  border-color: var(--si-border-highlight);
+  color: var(--si-text-primary);
+  transform: translateY(-1px);
+}
+
+.si-stage-btn.is-active {
+  background: var(--si-card-active-bg);
+  border-color: var(--stage-color, var(--si-cyan));
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.14), inset 0 2px 0 var(--stage-color, var(--si-cyan));
+  color: var(--si-text-primary);
+}
+
+.si-stage-btn-num {
+  display: block;
+  font-family: var(--si-font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--stage-color, var(--si-cyan));
+  margin-bottom: 0.2rem;
+}
+
+.si-stage-btn-name {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.si-acatech-readout {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 1.15fr;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+/* ==========================================================================
+   INFOGRAPHIC 2: #infographic-architecture-stack
+   ========================================================================== */
+
+.si-arch-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 1.35rem;
+  align-items: stretch;
+}
+
+.si-arch-stack-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.si-arch-layer-btn {
+  appearance: none;
+  width: 100%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.75rem 0.95rem;
+  background: var(--si-card-bg);
+  border: 1px solid var(--si-border-subtle);
+  border-left: 3px solid var(--layer-color, var(--si-cyan));
+  border-radius: var(--si-radius-sm);
+  color: var(--si-text-secondary);
+  cursor: pointer;
+  transition: all 0.22s var(--si-ease);
+}
+
+.si-arch-layer-btn:hover {
+  background: var(--si-card-hover-bg);
+  border-color: var(--layer-color, var(--si-cyan));
+  color: var(--si-text-primary);
+  transform: translateX(2px);
+}
+
+.si-arch-layer-btn.is-active {
+  background: var(--si-card-active-bg);
+  border-color: var(--layer-color, var(--si-cyan));
+  color: var(--si-text-primary);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+}
+
+.si-arch-layer-code {
+  font-family: var(--si-font-mono);
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: var(--layer-color, var(--si-cyan));
+  background: var(--si-pill-num-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.si-arch-layer-title {
+  font-family: var(--si-font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: inherit;
+  display: block;
+}
+
+.si-arch-layer-sub {
+  font-size: 0.76rem;
+  color: var(--si-text-muted);
+  display: block;
+  margin-top: 0.12rem;
+}
+
+.si-arch-layer-btn.is-active .si-arch-layer-sub {
+  color: var(--si-text-secondary);
+}
+
+.si-arch-layer-zone {
+  font-family: var(--si-font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--si-text-metallic);
+  opacity: 0.82;
+}
+
+.si-arch-inspector {
+  margin-top: 0.95rem;
+  background: var(--si-panel-deep-bg);
+  border: 1px solid var(--si-border-highlight);
+  border-radius: var(--si-radius-md);
+  padding: 1.15rem 1.25rem;
+}
+
+.si-chip-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.75rem 0 0.9rem;
+}
+
+.si-tech-chip {
+  font-family: var(--si-font-mono);
+  font-size: 0.74rem;
+  color: var(--si-text-metallic);
+  background: var(--si-chip-bg);
+  border: 1px solid var(--si-chip-border);
+  padding: 0.28rem 0.6rem;
+  border-radius: 6px;
+}
+
+.si-arch-bridge-note {
+  font-size: 0.86rem;
+  line-height: 1.56;
+  color: var(--si-text-secondary);
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--si-border-subtle);
+  margin: 0;
+}
+
+.si-arch-bridge-note strong {
+  color: var(--si-text-primary);
+}
+
+/* ==========================================================================
+   INFOGRAPHIC 3: #infographic-pain-diagnostic
+   ========================================================================== */
+
+.si-pain-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 1.35rem;
+  align-items: start;
+}
+
+.si-pain-list {
+  display: grid;
+  gap: 0.6rem;
+  max-height: 640px;
+  overflow-y: auto;
+  padding-right: 0.3rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--si-border-highlight) transparent;
+}
+
+.si-pain-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.si-pain-list::-webkit-scrollbar-thumb {
+  background: var(--si-border-highlight);
+  border-radius: 999px;
+}
+
+.si-pain-card {
+  appearance: none;
+  width: 100%;
+  text-align: left;
+  background: var(--si-card-bg);
+  border: 1px solid var(--si-border-subtle);
+  border-radius: var(--si-radius-sm);
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  color: var(--si-text-secondary);
+  transition: all 0.2s var(--si-ease);
+}
+
+.si-pain-card:hover {
+  background: var(--si-card-hover-bg);
+  border-color: var(--si-border-highlight);
+  color: var(--si-text-primary);
+}
+
+.si-pain-card.is-active {
+  background: var(--si-card-active-bg);
+  border-color: var(--pain-accent, var(--si-cyan));
+  box-shadow:
+    0 10px 24px rgba(15, 23, 42, 0.14),
+    inset 3px 0 0 var(--pain-accent, var(--si-cyan));
+  color: var(--si-text-primary);
+}
+
+.si-pain-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.38rem;
+}
+
+.si-pain-code {
+  font-family: var(--si-font-mono);
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pain-accent, var(--si-cyan));
+}
+
+.si-pain-axis-tag {
+  font-family: var(--si-font-mono);
+  font-size: 0.68rem;
+  color: var(--si-text-metallic);
+  background: var(--si-pill-num-bg);
+  padding: 0.14rem 0.48rem;
+  border-radius: 999px;
+}
+
+.si-pain-quote {
+  font-family: var(--si-font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.38;
+  margin: 0;
+  color: inherit;
+}
+
+.si-pain-route-panel {
+  position: sticky;
+  top: 5.5rem;
+  background: var(--si-panel-deep-bg);
+  border: 1px solid var(--si-border-highlight);
+  border-radius: var(--si-radius-md);
+  padding: 1.25rem;
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.14);
+}
+
+.si-route-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.si-route-step-box {
+  background: var(--si-step-box-bg);
+  border: 1px solid var(--si-border-subtle);
+  border-radius: var(--si-radius-sm);
+  padding: 0.9rem 1rem;
+}
+
+.si-route-step-label {
+  font-family: var(--si-font-mono);
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--step-accent, var(--si-cyan));
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.si-route-step-text {
+  font-size: 0.86rem;
+  line-height: 1.54;
+  color: var(--si-text-metallic);
+  margin: 0;
+}
+
+.si-compliance-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  font-size: 0.76rem;
+  color: var(--si-text-muted);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   INFOGRAPHIC 4: #infographic-governance-formats
+   ========================================================================== */
+
+.si-gov-dual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+  margin-top: 1.2rem;
+}
+
+.si-gov-card {
+  background: var(--si-card-bg);
+  border: 1px solid var(--si-border-subtle);
+  border-top: 3px solid var(--gov-accent, var(--si-teal));
+  border-radius: var(--si-radius-md);
+  padding: 1.25rem;
+  transition: border-color 0.25s var(--si-ease), box-shadow 0.25s var(--si-ease);
+}
+
+.si-gov-card.is-highlighted {
+  border-color: var(--gov-accent, var(--si-teal));
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+}
+
+.si-gov-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.si-gov-norm-badge {
+  font-family: var(--si-font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--gov-accent, var(--si-teal));
+  padding: 0.26rem 0.65rem;
+  border-radius: 6px;
+}
+
+:root:not([data-theme="light"]) .si-gov-norm-badge {
+  color: #06080d;
+}
+
+.si-gov-domain {
+  font-family: var(--si-font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--si-text-secondary);
+}
+
+.si-gov-compare {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.9rem 0;
+}
+
+.si-gov-before,
+.si-gov-after {
+  padding: 0.72rem 0.88rem;
+  border-radius: 9px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.si-gov-before {
+  background: color-mix(in srgb, var(--si-magenta) 9%, transparent);
+  border: 1px solid color-mix(in srgb, var(--si-magenta) 26%, transparent);
+  color: var(--si-text-secondary);
+}
+
+.si-gov-after {
+  background: color-mix(in srgb, var(--si-teal) 11%, transparent);
+  border: 1px solid color-mix(in srgb, var(--si-teal) 32%, transparent);
+  color: var(--si-text-primary);
+}
+
+.si-gov-state-label {
+  display: block;
+  font-family: var(--si-font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.22rem;
+}
+
+.si-gov-before .si-gov-state-label {
+  color: var(--si-gov-before-label);
+}
+
+.si-gov-after .si-gov-state-label {
+  color: var(--si-gov-after-label);
+}
+
+/* 5 Contracting Formats Progression */
+.si-formats-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.si-format-step-btn {
+  appearance: none;
+  text-align: left;
+  background: var(--si-card-bg);
+  border: 1px solid var(--si-border-subtle);
+  border-radius: var(--si-radius-sm);
+  padding: 0.8rem 0.85rem;
+  cursor: pointer;
+  color: var(--si-text-secondary);
+  transition: all 0.22s var(--si-ease);
+}
+
+.si-format-step-btn:hover {
+  background: var(--si-card-hover-bg);
+  border-color: var(--si-border-highlight);
+  color: var(--si-text-primary);
+  transform: translateY(-2px);
+}
+
+.si-format-step-btn.is-active {
+  background: var(--si-card-active-bg);
+  border-color: var(--fmt-color, var(--si-amber));
+  box-shadow:
+    0 10px 24px rgba(15, 23, 42, 0.14),
+    inset 0 2px 0 var(--fmt-color, var(--si-amber));
+  color: var(--si-text-primary);
+}
+
+.si-format-num {
+  font-family: var(--si-font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--fmt-color, var(--si-amber));
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.si-format-name {
+  font-family: var(--si-font-display);
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.28;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.si-format-tag {
+  font-size: 0.74rem;
+  color: var(--si-text-muted);
+  display: block;
+  line-height: 1.35;
+}
+
+.si-format-step-btn.is-active .si-format-tag {
+  color: var(--si-text-metallic);
+}
+
+.si-format-detail-panel {
+  margin-top: 1.1rem;
+  background: var(--si-panel-deep-bg);
+  border: 1px solid var(--si-border-highlight);
+  border-radius: var(--si-radius-md);
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 0.95fr;
+  gap: 1.1rem;
+  align-items: start;
+}
+
+/* ---------- Responsive Breakpoints ---------- */
+@media (max-width: 1080px) {
+  .si-arch-layout,
+  .si-pain-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .si-pain-route-panel {
+    position: static;
+  }
+
+  .si-pain-list {
+    max-height: 380px;
+  }
+
+  .si-axes-detail-grid,
+  .si-acatech-readout,
+  .si-format-detail-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .si-acatech-stage-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .si-formats-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .si-ig-frame {
+    padding: 1.1rem 1rem;
+    border-radius: 16px;
+  }
+
+  .si-ig-translation-bar {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .si-gov-dual-grid,
+  .si-route-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .si-acatech-stage-strip,
+  .si-formats-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .si-arch-layer-btn {
+    grid-template-columns: auto 1fr;
+  }
+
+  .si-arch-layer-zone {
+    display: none;
+  }
+
+  .si-ig-helper-hint {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 460px) {
+  .si-acatech-stage-strip,
+  .si-formats-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .si-svg-flow,
+  .si-svg-flow--fast,
+  .si-svg-flow--reverse,
+  .si-ig-eyebrow-dot,
+  .si-panel-animate {
+    animation: none !important;
+  }
+}

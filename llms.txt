@@ -1,0 +1,60 @@
+# SmartInovaT — Industry 4.0 Engineering, IoT Connectivity, Production AI & ISO Governance
+
+> Shop-floor data from the physical world to the logical world. Without reliable data, broad Artificial Intelligence deployment cannot succeed. SmartInovaT solves both ends: connecting what generates the data on the shop floor and building the software that transforms it into governed decisions.
+
+- **Official Website (PT-BR):** https://www.smartinovat.com/
+- **Official Website (EN Global):** https://www.smartinovat.com/en/
+- **Executive Contact Desk:** https://www.smartinovat.com/#contato
+- **Direct WhatsApp Channel:** +55 85 98787 5886
+- **Strategic Base:** Pomerode — Santa Catarina, Brazil (European Valley Industrial Hub; serving Brazil, the Americas, and Europe)
+
+---
+
+## 1. Company Profile & Founding Expertise (EN / PT-BR)
+
+**EN:** SmartInovaT is a next-generation engineering and software firm (established 2025) built upon **over 30 years of verified industrial and executive leadership (1994–present)**. Unlike advisory firms that outsource execution or software agencies detached from heavy manufacturing, SmartInovaT combines hands-on manufacturing engineering with in-house full-stack web and AI software development.
+
+**PT-BR:** A SmartInovaT é uma empresa de nova geração (2025–hoje) construída sobre **mais de 30 anos de expertise industrial e executiva verificada em campo (1994–hoje)**. Diferente de consultorias que terceirizam a execução ou casas de software que desconhecem a máquina, resolve as duas pontas: conecta o chão de fábrica ao ERP e desenvolve aplicações próprias de Inteligência Artificial.
+
+### Verified Track Record Highlights
+- **30+ years** bridging physical shop-floor operations and executive strategy (1994–present).
+- **100% of the brake-drum machining line** commissioned for Mercedes-Benz Brazil / Trucks, alongside CNC machining center and lathe retrofitting.
+- **850 t/month** textile knitting and finishing plant built end-to-end from civil/electrical foundations to ERP rollout and ISO 9001 & ISO 14000 certifications.
+- **1,500 t/month** spinning plant modernization and enterprise asset maintenance governance.
+- **German industrial integration:** Künkel Wagner heavy molding line coordination and bilateral foreign trade with Germany.
+- **~11 years** continuously dedicated to real-time wireless machine telemetry, M2M remote diagnostics, industrial IoT, LPWAN networks, and vision systems.
+- **Executive Innovation & Governance:** Corporate innovation hub (i-hub) implementation, field application of the German **ACATECH Industrie 4.0 Maturity Index**, **ISO 56002** (Innovation Management), and **ISO 42001** (Responsible AI Management).
+
+---
+
+## 2. The 4 Solution Axes
+
+1. **Assessment (Diagnóstico — ACATECH Maturity Index):** Field evaluation across all 6 Industry 4.0 maturity stages, bottleneck mapping, ROI-prioritized investment roadmap, and low-risk pilot specification.
+2. **Connectivity (Conexão — Physical to Digital):** Direct Machine–Sensor–ERP integration, CNC/machine-tool retrofitting, wireless telemetry, M2M, industrial LPWAN networks, and cloud data historians.
+3. **Intelligence (Inteligência — Data to Decision):** Computer vision optical quality inspection, predictive maintenance over telemetry series, process & back-office automation, conversational AI agents, and generative video/voice studios.
+4. **Governance (Governança — ISO 56002 & ISO 42001):** Continuous innovation systems (ISO 56002), auditable responsible AI governance (ISO 42001), executive advisory, and corporate AI training.
+
+---
+
+## 3. Integrated Portfolio of 9 Proprietary Web & AI Applications
+
+All 9 applications were designed and coded in-house by SmartInovaT and are available as integrated interactive demonstrations within https://www.smartinovat.com/#portfolio:
+
+1. **ProduthivIA:** AI-assisted enterprise productivity, process digital twin, and ROI prioritization matrix.
+2. **CapacittAI:** Gamified corporate AI learning platform transforming internal company documentation into career tracks, virtual tutors, and certificates.
+3. **Presenthia:** Conversational WhatsApp AI concierge for scheduling, lead qualification, kanban funnel management, and human handoff.
+4. **Eckko AI:** Multi-tenant digital avatar video studio with voice synthesis, scene editing, and stage-by-stage approval.
+5. **StrikeFlow3:** Real-time quantitative financial market AI platform operating on live pricing in simulated environments with risk controls and audit trails.
+6. **EduMaxia:** Multi-role educational network platform secured by Keycloak federated identity.
+7. **Bellavitia:** Digital health and wellness platform featuring guided sessions and structured exam storage.
+8. **Solochordys:** Server-side rendered Next.js multi-instrument music and studio education platform.
+9. **Parthituria:** High-density vector SVG SATB choral score engraving studio synchronized with browser audio playback.
+
+---
+
+## 4. Engagement Formats
+- **Standalone ACATECH Assessment** (fixed scope, ROI roadmap, zero lock-in)
+- **High-Impact Pilot Project** (low risk, rapid operational validation)
+- **Custom Web & AI Software Engineering** (bespoke end-to-end systems)
+- **Executive Advisory** (board & C-level technology/governance guidance)
+- **Corporate AI Enablement** (tailored tracks built from the client's own documentation)

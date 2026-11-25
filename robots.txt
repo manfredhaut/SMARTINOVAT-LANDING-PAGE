@@ -1,0 +1,46 @@
+# SmartInovaT — Global Search, Ads & AI Crawler Directives
+# Official Canonical Domain: https://www.smartinovat.com/
+
+User-agent: *
+Allow: /
+
+# Google Search, Google Images, Google Ads & Google AdSense Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# Microsoft Bing & Global Search Engines
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI Search & Answer Engines
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://www.smartinovat.com/sitemap.xml

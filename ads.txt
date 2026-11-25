@@ -1,0 +1,4 @@
+# SmartInovaT (https://www.smartinovat.com/) — Authorized Digital Sellers (IAB Tech Lab ads.txt v1.1)
+# When activating Google AdSense on www.smartinovat.com, uncomment the line below and replace
+# pub-0000000000000000 with your verified Google Publisher ID:
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

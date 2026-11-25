@@ -1,52 +1,1320 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-lang="pt" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartInovat | Inteligência Artificial & Desenvolvimento</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0b0f19;
-            color: #f3f4f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartInovaT | Consultoria Indústria 4.0, IoT e IA Aplicada</title>
+  <meta name="description" content="Consultoria Indústria 4.0, IoT/ERP, método ACATECH, ISO 42001 e IA em produção (+30 anos de expertise). Solicite diagnóstico executivo agora!" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#06080d" />
+
+  <!-- Preload LCP Hero Image (WebP Ultrarrápido) -->
+  <link rel="preload" as="image" href="assets/images/hero-physical-logical.webp" type="image/webp" fetchpriority="high" />
+
+  <!-- Geo & Global Indexing Metadata -->
+  <meta name="geo.region" content="BR-SC" />
+  <meta name="geo.placename" content="Pomerode, Santa Catarina, Brazil" />
+  <meta name="geo.position" content="-26.7406;-49.1764" />
+  <meta name="ICBM" content="-26.7406, -49.1764" />
+
+  <!-- Canonical & Hreflang Bidirecional Mundial -->
+  <link rel="canonical" href="https://www.smartinovat.com/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://www.smartinovat.com/" />
+  <link rel="alternate" hreflang="pt" href="https://www.smartinovat.com/" />
+  <link rel="alternate" hreflang="en" href="https://www.smartinovat.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.smartinovat.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="SmartInovaT" />
+  <meta property="og:title" content="SmartInovaT | Dados do Mundo Físico Industrial para a Decisão com IA" />
+  <meta property="og:description" content="Empresa de nova geração apoiada em +30 anos de expertise de chão de fábrica: conecta o que gera o dado e constrói o que o transforma em decisão lógica. Método ACATECH, ISO 56002 &amp; 42001 e 9 aplicações próprias no ar." />
+  <meta property="og:url" content="https://www.smartinovat.com/" />
+  <meta property="og:image" content="https://www.smartinovat.com/assets/images/hero-physical-logical.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SmartInovaT | Engenharia Industrial 4.0 &amp; IA em Produção" />
+  <meta name="twitter:description" content="Dados de chão de fábrica do mundo físico para o mundo lógico. +30 anos de bagagem industrial aplicados em conectividade, software próprio com IA e governança executiva." />
+  <meta name="twitter:image" content="https://www.smartinovat.com/assets/images/hero-physical-logical.png" />
+
+  <!-- Pre-Paint Theme & Google Consent Mode v2 Bootstrap (Google Ads / AdSense / GA4 / GTM Ready) -->
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('smartinovat_theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', savedTheme);
         }
-        .container {
-            max-width: 600px;
-            padding: 40px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.03);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+      } catch (_e) {}
+
+      window.SMARTINOVAT_ROOT_PREFIX = './';
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+
+      var consentChoice = null;
+      try { consentChoice = localStorage.getItem('smartinovat_consent_v2'); } catch (_e2) {}
+      var granted = consentChoice === 'granted';
+
+      gtag('consent', 'default', {
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        analytics_storage: granted ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+    })();
+  </script>
+
+  <!-- SVG Favicon — Onda Espectral SmartInovaT -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306080d'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%23429a8e'/%3E%3Cstop offset='28%25' stop-color='%231db7c4'/%3E%3Cstop offset='60%25' stop-color='%23c63368'/%3E%3Cstop offset='100%25' stop-color='%23eca94c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M6 34 C16 14, 26 14, 34 34 C42 52, 50 50, 58 28' fill='none' stroke='url(%23g)' stroke-width='4.5' stroke-linecap='round'/%3E%3Cpath d='M4 32 L60 32' stroke='%23dce3ec' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets de Arquitetura Modular -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
+  <link rel="stylesheet" href="assets/css/infographics.css" />
+
+  <!-- Schema.org Advanced @graph (Organization, ProfessionalService, WebSite, ItemList 9 Apps, OfferCatalog & FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://www.smartinovat.com/#organization",
+        "name": "SmartInovaT",
+        "alternateName": "SmartInovaT Soluções Empresariais",
+        "foundingDate": "2025",
+        "url": "https://www.smartinovat.com/",
+        "logo": "https://www.smartinovat.com/assets/images/brand-wave-horizontal.jpg",
+        "image": "https://www.smartinovat.com/assets/images/hero-physical-logical.png",
+        "description": "Dados de chão de fábrica do mundo físico para o mundo lógico. Empresa de nova geração construída sobre mais de 30 anos de expertise em engenharia industrial, conectividade IoT/M2M/LPWAN ao ERP, aplicações próprias de Inteligência Artificial em produção e governança executiva pelo ACATECH Maturity Index, ISO 56002 e ISO 42001.",
+        "telephone": "+55-85-98787-5886",
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Pomerode",
+          "addressRegion": "SC",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -26.7406,
+          "longitude": -49.1764
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "Brazil" },
+          { "@type": "Place", "name": "Worldwide" }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Atendimento Executivo e Engenharia",
+            "telephone": "+55-85-98787-5886",
+            "url": "https://www.smartinovat.com/#contato",
+            "availableLanguage": ["Portuguese", "English", "German"]
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Soluções de Indústria 4.0, Conectividade, IA e Governança",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diagnóstico de Maturidade Indústria 4.0 (ACATECH Maturity Index)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conectividade Chão de Fábrica, IoT, M2M, LPWAN, Retrofitting CNC e Integração ERP" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engenharia de Inteligência Artificial, Visão Computacional e Manutenção Preditiva" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Governança Executiva ISO 56002 (Inovação) e ISO 42001 (IA Responsável)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desenvolvimento de Aplicações Web e IA Sob Medida" } }
+          ]
         }
-        h1 {
-            color: #3b82f6;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #9ca3af;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        .contact {
-            margin-top: 30px;
-            font-weight: bold;
-            color: #10b981;
-        }
-    </style>
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.smartinovat.com/#website",
+        "url": "https://www.smartinovat.com/",
+        "name": "SmartInovaT",
+        "inLanguage": ["pt-BR", "en"],
+        "publisher": { "@id": "https://www.smartinovat.com/#organization" }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://www.smartinovat.com/#portfolio-list",
+        "name": "Portfólio de 9 Aplicações Web Próprias em Produção — SmartInovaT",
+        "numberOfItems": 9,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareApplication", "name": "ProduthivIA", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Diagnóstico, gêmeo de processo e matriz de priorização apoiados em IA." } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareApplication", "name": "CapacittAI", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "description": "Treinamento corporativo gamificado com IA a partir da documentação da empresa." } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "SoftwareApplication", "name": "Presenthia", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Atendimento com IA no WhatsApp, qualificação comercial, agenda e funil." } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "SoftwareApplication", "name": "eckko.ai", "applicationCategory": "MultimediaApplication", "operatingSystem": "Web", "description": "Estúdio multi-tenant de vídeo com avatar digital, voz e aprovação por etapas." } },
+          { "@type": "ListItem", "position": 5, "item": { "@type": "SoftwareApplication", "name": "StrikeFlow3", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "description": "Engenharia quantitativa em tempo real com IA sobre preços reais em conta simulada." } },
+          { "@type": "ListItem", "position": 6, "item": { "@type": "SoftwareApplication", "name": "EduMaxia", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "description": "Plataforma educacional multi-perfil com autenticação federada Keycloak." } },
+          { "@type": "ListItem", "position": 7, "item": { "@type": "SoftwareApplication", "name": "Bellavitia", "applicationCategory": "HealthApplication", "operatingSystem": "Web", "description": "Plataforma digital de bem-estar, sessões guiadas e cofre estruturado de exames." } },
+          { "@type": "ListItem", "position": 8, "item": { "@type": "SoftwareApplication", "name": "Solochordys", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "description": "Plataforma SSR em Next.js para ensino musical multi-instrumento e estúdio." } },
+          { "@type": "ListItem", "position": 9, "item": { "@type": "SoftwareApplication", "name": "Parthituria", "applicationCategory": "MultimediaApplication", "operatingSystem": "Web", "description": "Estúdio coral SATB e gravura musical vetorial de alta densidade com player integrado." } }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.smartinovat.com/#faq-schema",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Por onde começar quando a indústria ainda não tem máquinas conectadas nem indicadores confiáveis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pelo Diagnóstico de Maturidade Digital baseado no método alemão ACATECH Maturity Index. De escopo fechado e sem compromisso de continuidade, ele audita os 6 estágios da operação, identifica onde o dado morre hoje e entrega um roadmap priorizado por retorno financeiro (ROI) junto ao desenho de um projeto-piloto de baixo risco."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "É possível conectar centros de usinagem CNC e máquinas legadas ao ERP sem trocar o parque fabril?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Por meio de retrofitting técnico, sensores industriais não invasivos, comunicação M2M e redes sem fio de longo alcance (LPWAN/IoT), coletamos sinais operacionais de equipamentos legados em tempo real e integramos diretamente à nuvem e ao ERP corporativo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qual a diferença da SmartInovaT frente a consultorias tradicionais e fábricas de software?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A SmartInovaT é uma empresa de nova geração construída sobre mais de 30 anos de expertise industrial real — incluindo plantas de 850 t/mês e 1.500 t/mês, linhas alemãs e 100% da usinagem de tambores de freio para caminhões pesados — combinada à capacidade própria de projetar, codificar e operar 9 aplicações web com IA em produção."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que a empresa recebe na prática com a governança pelas normas ISO 56002 e ISO 42001?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Com a ISO 56002, a inovação deixa de depender de eventos isolados e torna-se um processo contínuo com funil e métricas. Com a ISO 42001, o uso corporativo de Inteligência Artificial passa a contar com políticas claras, gestão de risco, segurança e rastreabilidade auditável."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A SmartInovaT desenvolve aplicações sob medida para outros setores além da indústria?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. As 9 aplicações próprias em produção abrangem produtividade por processos, capacitação corporativa, atendimento via WhatsApp, vídeo generativo com avatar, engenharia quantitativa em tempo real, educação federada (Keycloak), saúde e áudio vetorial. Qualquer problema envolvendo dado, processo ou decisão pode ser desenvolvido sob medida."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
-    <div class="container">
-        <h1>SmartInovat</h1>
-        <p>Desenvolvimento de Aplicações, Web Design e Soluções em Inteligência Artificial.</p>
-        <p>Nosso novo portal está em desenvolvimento local e estará disponível em breve.</p>
-        <div class="contact">Contato: manfred@smartinovat.com</div>
+<body id="topo">
+  <a href="#conteudo-principal" class="skip-link" data-i18n="skip_link">Ir para o conteúdo principal</a>
+  <div id="live-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- 1. TOP RIBBON + HEADER FIXO GLASSMORPHIC -->
+  <div class="spectrum-bar" aria-hidden="true"></div>
+  <div class="top-ribbon">
+    <div class="container top-ribbon__inner">
+      <div class="top-ribbon__location">
+        <span class="top-ribbon__pulse" aria-hidden="true"></span>
+        <span data-i18n="ribbon_location">POMERODE — SANTA CATARINA • POLO INDUSTRIAL DO VALE EUROPEU • ATUAÇÃO NACIONAL &amp; GLOBAL</span>
+      </div>
+      <div class="top-ribbon__contacts">
+        <a class="ribbon-chip" href="#portfolio">
+          <span data-i18n="ribbon_apps">9 Aplicações em Produção</span>
+        </a>
+        <a class="ribbon-chip" href="#contato">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span data-i18n="ribbon_contact">Caixa de Contato Executivo</span>
+        </a>
+      </div>
     </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a href="#topo" class="brand-logo" aria-label="SmartInovaT">
+        <svg class="brand-logo__mark" viewBox="0 0 96 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoSpectrum1" x1="4" y1="30" x2="92" y2="30" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#429a8e" />
+              <stop offset="28%" stop-color="#1db7c4" />
+              <stop offset="58%" stop-color="#c63368" />
+              <stop offset="82%" stop-color="#db8a50" />
+              <stop offset="100%" stop-color="#eca94c" />
+            </linearGradient>
+            <linearGradient id="logoBeam" x1="0" y1="30" x2="96" y2="30" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#dce3ec" stop-opacity="0" />
+              <stop offset="20%" stop-color="#f3f6fa" stop-opacity="0.95" />
+              <stop offset="80%" stop-color="#dce3ec" stop-opacity="0.95" />
+              <stop offset="100%" stop-color="#dce3ec" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <path d="M8 31 C22 8, 34 8, 47 31 C59 52, 71 50, 88 22" stroke="url(#logoSpectrum1)" stroke-width="3.2" stroke-linecap="round" opacity="0.95" />
+          <path d="M10 33 C25 14, 38 12, 51 33 C63 49, 75 45, 90 25" stroke="url(#logoSpectrum1)" stroke-width="1.6" stroke-linecap="round" opacity="0.62" />
+          <path d="M12 29 C26 44, 39 42, 52 25 C64 10, 76 14, 89 31" stroke="url(#logoSpectrum1)" stroke-width="1.5" stroke-linecap="round" opacity="0.5" />
+          <path d="M2 30.5 L94 30.5" stroke="url(#logoBeam)" stroke-width="2.4" stroke-linecap="round" />
+        </svg>
+        <div class="brand-logo__text">
+          <span class="brand-logo__wordmark">SmartInovaT</span>
+          <span class="brand-logo__sub" data-i18n="brand_sub">Soluções Empresariais</span>
+        </div>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal" data-i18n-aria="nav_aria">
+        <a href="#qualificacoes" class="nav-link" data-i18n="nav_qualifications">Qualificações</a>
+        <a href="#portfolio" class="nav-link"><span data-i18n="nav_portfolio">Portfólio Vivo</span> <span class="nav-badge">9</span></a>
+        <a href="#eixos-acatech" class="nav-link" data-i18n="nav_axes">Eixos &amp; ACATECH</a>
+        <a href="#catalogo-dores" class="nav-link" data-i18n="nav_pains">Soluções por Dor</a>
+        <a href="#arquitetura" class="nav-link" data-i18n="nav_arch">Arquitetura &amp; Governança</a>
+        <a href="#contato" class="nav-link" data-i18n="nav_contact">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Seletor Bilíngue PT | EN -->
+        <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
+          <button type="button" class="lang-switch__btn is-active" data-set-lang="pt" aria-pressed="true" title="Português (Brasil)">PT</button>
+          <button type="button" class="lang-switch__btn" data-set-lang="en" aria-pressed="false" title="English (Global)">EN</button>
+        </div>
+
+        <!-- Alternador de Tema Claro / Escuro -->
+        <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Alternar modo claro ou escuro" data-i18n-aria="theme_toggle_aria" title="Modo Claro / Escuro">
+          <!-- Ícone Sol (exibido no modo escuro para mudar para claro) -->
+          <svg class="theme-icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <!-- Ícone Lua (exibido no modo claro para mudar para escuro) -->
+          <svg class="theme-icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <button type="button" class="btn btn--primary btn--sm" data-prefill-topic="Diagnóstico ACATECH" data-i18n="header_cta">
+          Agendar Diagnóstico
+        </button>
+
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu de navegação">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <!-- 2. HERO CINEMATOGRÁFICO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <svg class="hero__ambient-wave" viewBox="0 0 1440 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="heroWaveGrad" x1="0" y1="190" x2="1440" y2="190" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#429a8e" stop-opacity="0" />
+            <stop offset="18%" stop-color="#429a8e" />
+            <stop offset="38%" stop-color="#1db7c4" />
+            <stop offset="62%" stop-color="#c63368" />
+            <stop offset="82%" stop-color="#eca94c" />
+            <stop offset="100%" stop-color="#eca94c" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <path d="M0 195 C260 60, 460 75, 720 195 C980 315, 1180 295, 1440 165" stroke="url(#heroWaveGrad)" stroke-width="2.2" />
+        <path d="M0 205 C290 105, 500 95, 750 205 C1010 320, 1210 260, 1440 185" stroke="url(#heroWaveGrad)" stroke-width="1.3" opacity="0.65" />
+        <path d="M0 185 C260 295, 490 290, 740 175 C990 60, 1190 100, 1440 205" stroke="url(#heroWaveGrad)" stroke-width="1.4" opacity="0.5" />
+        <line x1="80" y1="192" x2="1360" y2="192" stroke="#dce3ec" stroke-opacity="0.22" stroke-width="1.2" />
+      </svg>
+
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content reveal-item">
+            <div class="hero__badge">
+              <span class="eyebrow__dot" aria-hidden="true"></span>
+              <span data-i18n="hero_badge">ENGENHARIA INDUSTRIAL 4.0 • IA EM PRODUÇÃO • GOVERNANÇA ISO 56002 &amp; 42001</span>
+            </div>
+
+            <h1 class="hero__title" id="hero-heading" data-i18n-html="hero_title_html">
+              Do chão de fábrica físico à <span class="text-spectrum">decisão lógica</span> em produção.
+            </h1>
+
+            <blockquote class="hero__positioning-box">
+              <p class="hero__positioning-quote" data-i18n-html="hero_quote_html">
+                “<strong>Dados de chão de fábrica do mundo físico para o mundo lógico.</strong> Sem dado, a aplicação de Inteligência Artificial de forma ampla não é eficaz. A SmartInovaT resolve as duas pontas: <strong>conecta o que gera o dado</strong> e <strong>constrói o que o transforma em decisão</strong>.”
+              </p>
+            </blockquote>
+
+            <p class="hero__subcopy" data-i18n-html="hero_subcopy_html">
+              Uma empresa de nova geração construída sobre <strong>mais de 30 anos de expertise industrial real</strong>: a bagagem executiva de quem montou linha alemã, executou retrofitting de centros de usinagem CNC e ergueu planta fabril do alicerce ao ERP — hoje aplicada na arquitetura, desenvolvimento e operação de plataformas modernas de Inteligência Artificial em produção. Nem consultoria que terceiriza a execução, nem casa de software que desconhece a máquina.
+            </p>
+
+            <div class="hero__cta-row">
+              <button type="button" class="btn btn--primary" data-prefill-topic="Diagnóstico ACATECH">
+                <span data-i18n="hero_cta_1">Solicitar Diagnóstico ACATECH</span>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+              <a href="#portfolio" class="btn btn--spectrum">
+                <span data-i18n="hero_cta_2">Explorar 9 Aplicações em Produção</span>
+              </a>
+              <a href="#catalogo-dores" class="btn btn--ghost">
+                <span data-i18n="hero_cta_3">Entrar pela Minha Dor Operacional</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal-item">
+            <div class="hero-visual__frame">
+              <div class="hero-visual__viewport">
+                <picture>
+                  <source srcset="assets/images/hero-physical-logical.webp" type="image/webp" />
+                  <img
+                    src="assets/images/hero-physical-logical.png"
+                    alt="Ponte tecnológica conectando centros de usinagem CNC e sensores industriais no mundo físico a sistemas ERP e Inteligência Artificial no mundo lógico"
+                    data-i18n-alt="hero_img_alt"
+                    class="hero-visual__img"
+                    width="1376"
+                    height="768"
+                    fetchpriority="high"
+                    decoding="async"
+                  />
+                </picture>
+                <div class="hero-visual__hud-top">
+                  <span class="hud-pill hud-pill--cyan" data-i18n="hero_hud_1">PONTA 01 • MÁQUINA, CNC &amp; TELEMETRIA</span>
+                  <span class="hud-pill hud-pill--amber" data-i18n="hero_hud_2">PONTA 02 • ERP, IA &amp; DECISÃO</span>
+                </div>
+              </div>
+              <div class="hero-visual__bridge-bar">
+                <span class="bridge-node" data-i18n="hero_bridge_1">Chão de Fábrica &amp; Sensores</span>
+                <span class="bridge-line" aria-hidden="true"></span>
+                <span class="bridge-node" data-i18n="hero_bridge_2">Aquisição Nuvem &amp; ERP</span>
+                <span class="bridge-line" aria-hidden="true"></span>
+                <span class="bridge-node" data-i18n="hero_bridge_3">IA &amp; Governança ISO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Barra dos 6 Números Verificados -->
+        <div class="metrics-strip">
+          <article class="metric-card reveal-item">
+            <div class="metric-card__value">
+              <span data-counter="30" data-prefix="+">+30</span> <span class="metric-card__unit" data-i18n="m1_unit">anos</span>
+            </div>
+            <p class="metric-card__label" data-i18n="m1_label">de expertise industrial e executiva acumulada do chão de fábrica à estratégia</p>
+          </article>
+
+          <article class="metric-card reveal-item">
+            <div class="metric-card__value">
+              <span data-counter="100" data-suffix="%">100%</span>
+            </div>
+            <p class="metric-card__label" data-i18n="m2_label">da usinagem dos tambores de freio da Mercedes-Benz Caminhões implantada</p>
+          </article>
+
+          <article class="metric-card reveal-item">
+            <div class="metric-card__value">
+              <span data-counter="850">850</span> <span class="metric-card__unit" data-i18n="m3_unit">t/mês</span>
+            </div>
+            <p class="metric-card__label" data-i18n="m3_label">unidade industrial têxtil construída integralmente do alicerce ao ERP e ISO</p>
+          </article>
+
+          <article class="metric-card reveal-item">
+            <div class="metric-card__value">
+              <span data-counter="1500" data-format="pt">1.500</span> <span class="metric-card__unit" data-i18n="m4_unit">t/mês</span>
+            </div>
+            <p class="metric-card__label" data-i18n="m4_label">planta de fiação com modernização produtiva e gestão de manutenção de ativos</p>
+          </article>
+
+          <article class="metric-card reveal-item">
+            <div class="metric-card__value">
+              <span data-counter="11" data-prefix="~">~11</span> <span class="metric-card__unit" data-i18n="m5_unit">anos</span>
+            </div>
+            <p class="metric-card__label" data-i18n="m5_label">dedicados continuamente a IoT, M2M, LPWAN e Indústria 4.0 em campo</p>
+          </article>
+
+          <article class="metric-card reveal-item">
+            <div class="metric-card__value">
+              <span data-counter="9">9</span> <span class="metric-card__unit" data-i18n="m6_unit">apps</span>
+            </div>
+            <p class="metric-card__label" data-i18n="m6_label">aplicações web próprias em produção, construídas e operadas em domínios distintos</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- 3. QUALIFICAÇÕES & BASE INDUSTRIAL DE 30+ ANOS -->
+    <section class="section section--alt" id="qualificacoes" aria-labelledby="qualificacoes-heading">
+      <div class="container">
+        <header class="section-header reveal-item">
+          <div class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            <span data-i18n="qual_eyebrow">CREDIBILIDADE VERIFICADA • CHÃO DE FÁBRICA E CÓDIGO NA MESMA ARQUITETURA</span>
+          </div>
+          <h2 class="section-title" id="qualificacoes-heading" data-i18n-html="qual_title_html">
+            Empresa de Nova Geração com <span class="text-metallic">+30 Anos de Expertise Industrial</span>
+          </h2>
+          <p class="section-lead" data-i18n="qual_lead">
+            Nascida em 2025 para unir o mundo físico à decisão com IA, a SmartInovaT traz em sua liderança técnica mais de três décadas de experiência acumulada e verificada em campo (1994–hoje) — da automação pneumática, montagem de maquinário alemão e retrofitting CNC à direção de centros de inovação e construção própria de software em produção.
+          </p>
+        </header>
+
+        <!-- Os 4 Diferenciais Raros -->
+        <div class="diff-grid">
+          <article class="diff-card reveal-item">
+            <div class="diff-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <span class="diff-card__tag" data-i18n="diff1_tag">Método Reconhecido</span>
+            <h3 class="diff-card__title" data-i18n="diff1_title">ACATECH Aplicado em Campo</h3>
+            <p class="diff-card__desc" data-i18n-html="diff1_desc_html">
+              Diagnóstico de maturidade Indústria 4.0 pelo <strong>ACATECH Maturity Index</strong> vivenciado em operação real — traduzido em roadmap sequenciado por retorno financeiro, nunca discurso genérico de catálogo.
+            </p>
+          </article>
+
+          <article class="diff-card reveal-item">
+            <div class="diff-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <span class="diff-card__tag" data-i18n="diff2_tag">Rastreabilidade Executiva</span>
+            <h3 class="diff-card__title" data-i18n="diff2_title">Governança ISO 56002 + ISO 42001</h3>
+            <p class="diff-card__desc" data-i18n-html="diff2_desc_html">
+              Diferencial raro em consultorias de tecnologia: inovação estruturada como sistema contínuo pela <strong>ISO 56002</strong> combinada à governança responsável e auditável de IA pela <strong>ISO 42001</strong>.
+            </p>
+          </article>
+
+          <article class="diff-card reveal-item">
+            <div class="diff-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <span class="diff-card__tag" data-i18n="diff3_tag">Capacidade Própria de Código</span>
+            <h3 class="diff-card__title" data-i18n="diff3_title">Portfólio Próprio de 9 Apps no Ar</h3>
+            <p class="diff-card__desc" data-i18n="diff3_desc">
+              Nove sistemas web completos construídos e operados pela própria SmartInovaT em domínios distintos — provando domínio real de engenharia de software, segurança, dados e IA generativa.
+            </p>
+          </article>
+
+          <article class="diff-card reveal-item">
+            <div class="diff-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <span class="diff-card__tag" data-i18n="diff4_tag">Bagagem Verificável</span>
+            <h3 class="diff-card__title" data-i18n="diff4_title">+30 Anos de Chão de Fábrica Real</h3>
+            <p class="diff-card__desc" data-i18n-html="diff4_desc_html">
+              Histórico comprovado em plantas de <strong>850 t/mês</strong> e <strong>1.500 t/mês</strong>, implantação de ERP, ISO 9001/14000, comércio exterior com a Alemanha e <strong>100% da usinagem</strong> de linha Mercedes-Benz Caminhões.
+            </p>
+          </article>
+        </div>
+
+        <!-- Linha do Tempo Executiva Interativa (1994 -> Hoje) -->
+        <div class="timeline-block reveal-item">
+          <div class="timeline-header">
+            <div>
+              <span class="diff-card__tag" data-i18n="tl_tag">EXPERTISE FUNDADORA &amp; LIDERANÇA TÉCNICA ACUMULADA (1994 — HOJE)</span>
+              <h3 class="timeline-header__title" data-i18n="tl_title">Linha do Tempo de Engenharia: 30+ Anos de Bagagem que Sustentam a SmartInovaT</h3>
+            </div>
+            <div class="timeline-filters" role="tablist">
+              <button type="button" class="timeline-filter-btn is-active" data-era-filter="all" role="tab" aria-selected="true" data-i18n="tl_filter_all">
+                Trajetória Completa (9)
+              </button>
+              <button type="button" class="timeline-filter-btn" data-era-filter="industrial" role="tab" aria-selected="false" data-i18n="tl_filter_ind">
+                Plantas, CNC &amp; Alemanha (1994–2012)
+              </button>
+              <button type="button" class="timeline-filter-btn" data-era-filter="digital-ai" role="tab" aria-selected="false" data-i18n="tl_filter_ai">
+                IoT, ACATECH &amp; IA (2013–Hoje)
+              </button>
+            </div>
+          </div>
+
+          <div class="timeline-track" id="timeline-track">
+            <article class="timeline-item" data-era="industrial">
+              <div class="timeline-item__top">
+                <span class="timeline-item__period">1994 – 1997</span>
+                <span class="timeline-item__org">Schuermann Equip. Industriais</span>
+              </div>
+              <h4 class="timeline-item__title" data-i18n="tl1_title">Automação Industrial &amp; Engenharia Aplicada</h4>
+              <p class="timeline-item__desc" data-i18n-html="tl1_desc_html">
+                Desenvolvimento de soluções técnicas de automação em integração direta com <strong>Spirax Sarco</strong>, <strong>Rexroth (Divisão Pneumática)</strong>, ASCOVAL, Ashcroft, Compair e Domnick Hunter, com treinamentos técnicos em plantas industriais.
+              </p>
+            </article>
+
+            <article class="timeline-item" data-era="industrial">
+              <div class="timeline-item__top">
+                <span class="timeline-item__period">1997 – 2002</span>
+                <span class="timeline-item__org">COTEFOR S.A.</span>
+              </div>
+              <h4 class="timeline-item__title" data-i18n="tl2_title">Planta Têxtil de 850 t/mês: Do Alicerce ao ERP</h4>
+              <p class="timeline-item__desc" data-i18n-html="tl2_desc_html">
+                Construção integral de unidade de malharia e beneficiamento de <strong>850 t/mês</strong>: obras civis, mecânicas, elétricas e TI, seleção de maquinário, sistemas de integração produtiva em toda a cadeia, implantação de <strong>ERP</strong> e certificações <strong>ISO 9001 e 14000</strong>.
+              </p>
+            </article>
+
+            <article class="timeline-item" data-era="industrial">
+              <div class="timeline-item__top">
+                <span class="timeline-item__period">1997 – 2002</span>
+                <span class="timeline-item__org">COTECE S.A.</span>
+              </div>
+              <h4 class="timeline-item__title" data-i18n="tl3_title">Fiação de 1.500 t/mês &amp; Gestão de Ativos</h4>
+              <p class="timeline-item__desc" data-i18n-html="tl3_desc_html">
+                Modernização e atualização tecnológica em unidade de fiação de <strong>1.500 t/mês</strong>, novos projetos fabris, adequação aos sistemas da qualidade ISO 9002 e 14000 e estruturação da gestão patrimonial e de manutenção de ativos.
+              </p>
+            </article>
+
+            <article class="timeline-item" data-era="industrial">
+              <div class="timeline-item__top">
+                <span class="timeline-item__period">2002 – 2010</span>
+                <span class="timeline-item__org">INTERTRADEX &amp; SOGESA</span>
+              </div>
+              <h4 class="timeline-item__title" data-i18n="tl4_title">Direção Executiva &amp; Comércio Exterior com a Alemanha</h4>
+              <p class="timeline-item__desc" data-i18n-html="tl4_desc_html">
+                Engenharia de negócios internacionais, importação/exportação, <em>business plans</em> para unidades industriais da construção civil e operação direta de comércio exterior com a <strong>Alemanha</strong>, além de direção de projetos exportadores industriais junto ao SEBRAE.
+              </p>
+            </article>
+
+            <article class="timeline-item" data-era="industrial">
+              <div class="timeline-item__top">
+                <span class="timeline-item__period">2010 – 2011</span>
+                <span class="timeline-item__org">DURAMETAL S.A.</span>
+              </div>
+              <h4 class="timeline-item__title" data-i18n="tl5_title">Linha de Moldagem Alemã Künkel Wagner</h4>
+              <p class="timeline-item__desc" data-i18n-html="tl5_desc_html">
+                Coordenação executiva entre montagem pesada, produção e manutenção da máquina de moldar alemã <strong>KÜNKEL WAGNER</strong>, incluindo tradução técnica de manuais, alarmes, interfaces de operação (IHM) e capacitação de equipes.
+              </p>
+            </article>
+
+            <article class="timeline-item timeline-item--featured" data-era="industrial">
+              <div class="timeline-item__top">
+                <span class="timeline-item__period">2010 – 2012</span>
+                <span class="timeline-item__org">DURAMENTAL S.A.</span>
+              </div>
+              <h4 class="timeline-item__title" data-i18n="tl6_title">100% Usinagem Mercedes-Benz Caminhões &amp; Retrofitting CNC</h4>
+              <p class="timeline-item__desc" data-i18n-html="tl6_desc_html">
+                Implantação de <strong>100% da usinagem dos tambores de freio da Mercedes-Benz do Brasil / Caminhões</strong>, usinagem de discos e tambores e <strong>retrofitting</strong> completo de centros de usinagem, tornos CNC e máquinas-ferramenta.
+              </p>
+            </article>
+
+            <article class="timeline-item timeline-item--featured" data-era="digital-ai">
+              <div class="timeline-item__top">
+                <span class="timeline-item__period">2013 – 2024</span>
+                <span class="timeline-item__org">MRG Tecnologia (~11a)</span>
+              </div>
+              <h4 class="timeline-item__title" data-i18n="tl7_title">~11 Anos em Monitoramento Wireless, M2M, IoT &amp; Visão</h4>
+              <p class="timeline-item__desc" data-i18n-html="tl7_desc_html">
+                Quase onze anos dedicados a sistemas de <strong>monitoramento de máquinas wireless em tempo real</strong>, soluções <strong>M2M</strong> para assistência remota, <strong>IoT</strong>, redes <strong>LPWAN</strong>, sistemas de visão, energias renováveis, lean manufacturing e maturidade digital.
+              </p>
+            </article>
+
+            <article class="timeline-item" data-era="digital-ai">
+              <div class="timeline-item__top">
+                <span class="timeline-item__period">2019 – 2023</span>
+                <span class="timeline-item__org">XPER Global — CTO</span>
+              </div>
+              <h4 class="timeline-item__title" data-i18n="tl8_title">Liderança de Inovação, i-hub, ACATECH &amp; ISO 56002</h4>
+              <p class="timeline-item__desc" data-i18n-html="tl8_desc_html">
+                Direção tecnológica e gestão de inovação pela norma <strong>ISO 56002</strong>, implantação de centros corporativos de inovação (<strong>i-hub</strong>), aplicação em campo do <strong>ACATECH Maturity Index</strong> e pesquisa aplicada de sistemas na UNIFOR.
+              </p>
+            </article>
+
+            <article class="timeline-item timeline-item--featured timeline-item--current" data-era="digital-ai">
+              <div class="timeline-item__top">
+                <span class="timeline-item__period" data-i18n="tl9_period">2025 – Hoje</span>
+                <span class="timeline-item__org">SmartInovaT</span>
+              </div>
+              <h4 class="timeline-item__title" data-i18n="tl9_title">Coleta Físico-Digital em Tempo Real &amp; IA em Produção</h4>
+              <p class="timeline-item__desc" data-i18n-html="tl9_desc_html">
+                Integração de dados do mundo físico para o lógico em tempo real, desenvolvimento e operação de <strong>9 aplicações próprias com IA</strong>, transformação Indústria 4.0, modelagem de negócios e governança executiva <strong>ISO 56002 &amp; ISO 42001</strong>.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Matriz Estruturada das Competências -->
+        <div class="competency-matrix">
+          <div class="competency-pillar reveal-item">
+            <div class="competency-pillar__head">
+              <h3 class="competency-pillar__title" data-i18n="comp1_title">Industrial &amp; Automação</h3>
+              <span class="competency-pillar__count" data-i18n="comp1_count">13 Competências</span>
+            </div>
+            <div class="tag-cloud">
+              <span class="comp-tag comp-tag--key" data-i18n="c_i40">Indústria 4.0</span>
+              <span class="comp-tag comp-tag--key" data-i18n="c_iot">IoT Industrial</span>
+              <span class="comp-tag comp-tag--key" data-i18n="c_m2m">Comunicação M2M</span>
+              <span class="comp-tag comp-tag--key" data-i18n="c_lpwan">Redes LPWAN</span>
+              <span class="comp-tag comp-tag--key" data-i18n="c_retro">Retrofitting de Máquinas CNC</span>
+              <span class="comp-tag" data-i18n="c_mon">Monitoramento de Máquinas e Sensores em Tempo Real</span>
+              <span class="comp-tag" data-i18n="c_cloud">Aquisição e Registro de Dados em Nuvem</span>
+              <span class="comp-tag" data-i18n="c_auto">Automação Industrial</span>
+              <span class="comp-tag" data-i18n="c_eng">Engenharia Industrial</span>
+              <span class="comp-tag" data-i18n="c_prod">Gestão de Produção</span>
+              <span class="comp-tag" data-i18n="c_log">Logística Industrial em Tempo Real</span>
+              <span class="comp-tag">Lean Manufacturing</span>
+              <span class="comp-tag" data-i18n="c_ren">Energias Renováveis</span>
+            </div>
+          </div>
+
+          <div class="competency-pillar reveal-item">
+            <div class="competency-pillar__head">
+              <h3 class="competency-pillar__title" data-i18n="comp2_title">Inovação &amp; Governança</h3>
+              <span class="competency-pillar__count" data-i18n="comp2_count">9 Competências</span>
+            </div>
+            <div class="tag-cloud">
+              <span class="comp-tag comp-tag--key">ACATECH Maturity Index</span>
+              <span class="comp-tag comp-tag--key" data-i18n="c_iso56">ISO 56002 (Gestão da Inovação)</span>
+              <span class="comp-tag comp-tag--key" data-i18n="c_iso42">ISO 42001 (IA Responsável)</span>
+              <span class="comp-tag comp-tag--key" data-i18n="c_ihub">Centros de Inovação (i-hub)</span>
+              <span class="comp-tag">ISO 9001 &amp; ISO 14000</span>
+              <span class="comp-tag" data-i18n="c_inn_mgmt">Gestão de Inovação Contínua</span>
+              <span class="comp-tag" data-i18n="c_inn_dig">Inovação Digital</span>
+              <span class="comp-tag" data-i18n="c_inn_ent">Inovação Empresarial</span>
+              <span class="comp-tag" data-i18n="c_roi_dt">Transformação Digital Orientada a ROI</span>
+            </div>
+          </div>
+
+          <div class="competency-pillar reveal-item">
+            <div class="competency-pillar__head">
+              <h3 class="competency-pillar__title" data-i18n="comp3_title">Gestão, Dados &amp; IA</h3>
+              <span class="competency-pillar__count" data-i18n="comp3_count">14 Competências</span>
+            </div>
+            <div class="tag-cloud">
+              <span class="comp-tag comp-tag--key" data-i18n="c_ai_prod">Inteligência Artificial em Produção</span>
+              <span class="comp-tag comp-tag--key" data-i18n="c_cv">Visão Computacional</span>
+              <span class="comp-tag comp-tag--key" data-i18n="c_pred">Manutenção Preditiva</span>
+              <span class="comp-tag comp-tag--key" data-i18n="c_erp">Integração de Sistemas &amp; ERP</span>
+              <span class="comp-tag" data-i18n="c_ba">Análise de Dados &amp; Negócios</span>
+              <span class="comp-tag" data-i18n="c_mt">Arquitetura Web Multi-Tenant</span>
+              <span class="comp-tag" data-i18n="c_kc">Identidade Federada (Keycloak)</span>
+              <span class="comp-tag" data-i18n="c_bizdev">Modelagem &amp; Novos Negócios</span>
+              <span class="comp-tag" data-i18n="c_pm">Planejamento &amp; Gestão de Projetos</span>
+              <span class="comp-tag" data-i18n="c_deliv">Entrega de Projetos Ponta-a-Ponta</span>
+              <span class="comp-tag" data-i18n="c_proc">Processos Empresariais</span>
+              <span class="comp-tag" data-i18n="c_genai">IA Generativa (Vídeo, Voz &amp; Agentes)</span>
+              <span class="comp-tag" data-i18n="c_smart_cs">Atendimento Inteligente</span>
+              <span class="comp-tag" data-i18n="c_team">Integração e Capacitação de Equipes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- 4. VITRINE DE PROVA REAL — AS 9 APLICAÇÕES WEB EM PRODUÇÃO -->
+    <section class="section" id="portfolio" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <header class="section-header reveal-item">
+          <div class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            <span data-i18n="port_eyebrow">PROVA CONCRETA DE ENGENHARIA • NOVE APLICAÇÕES INTERATIVAS INTEGRADAS</span>
+          </div>
+          <h2 class="section-title" id="portfolio-heading" data-i18n-html="port_title_html">
+            Vitrine Viva: <span class="text-spectrum">9 Aplicações Próprias</span> em Demonstração Interativa
+          </h2>
+          <p class="section-lead" data-i18n="port_lead">
+            Nenhuma das nove plataformas abaixo é revenda ou adaptação de software de prateleira. Todas foram projetadas e codificadas pela própria SmartInovaT para necessidades reais distintas — de diagnóstico de processos e treinamento corporativo gamificado a estúdio de vídeo com avatar digital, mesa quantitativa em tempo real, identidade federada Keycloak e renderização vetorial complexa. Explore cada demonstração interativa integrada diretamente aqui ou em nova aba local.
+          </p>
+        </header>
+
+        <!-- Container Oficial do Módulo @portfolio-architect -->
+        <div id="portfolio-showcase-root" class="peer-module-slot"></div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- 5A. BLOCO A — DIAGNÓSTICO ACATECH & OS 4 EIXOS DE SOLUÇÃO -->
+    <section class="section section--alt" id="eixos-acatech" aria-labelledby="eixos-heading">
+      <div class="container">
+        <div class="acatech-editorial">
+          <div class="reveal-item">
+            <div class="eyebrow">
+              <span class="eyebrow__dot" aria-hidden="true"></span>
+              <span data-i18n="aca_eyebrow">PORTA DE ENTRADA ESTRATÉGICA • MÉTODO ALEMÃO TRADUZIDO EM RETORNO</span>
+            </div>
+            <h2 class="section-title" id="eixos-heading" data-i18n-html="aca_title_html">
+              Os 4 Eixos de Solução &amp; <span class="text-metallic">Diagnóstico ACATECH</span>
+            </h2>
+            <p class="section-lead" data-i18n-html="aca_lead_html">
+              O erro mais caro na indústria é comprar sensores, painéis ou licenças de IA sem saber onde o dado morre hoje. Aplicamos o <strong>ACATECH Industrie 4.0 Maturity Index</strong> em campo para traduzir maturidade técnica em plano de investimento sequenciado pelo retorno financeiro.
+            </p>
+
+            <ul class="deliverables-list">
+              <li>
+                <span class="deliverables-check" aria-hidden="true">✓</span>
+                <div data-i18n-html="aca_li1_html"><strong>Fotografia Real da Operação:</strong> avaliação estruturada dos 6 estágios (da computadorização básica à adaptabilidade autônoma) cruzando máquinas, sistemas, processos e pessoas.</div>
+              </li>
+              <li>
+                <span class="deliverables-check" aria-hidden="true">✓</span>
+                <div data-i18n-html="aca_li2_html"><strong>Roadmap Priorizado por ROI:</strong> identificação exata de qual gargalo destrava caixa primeiro — evitando investimentos prematuros no lugar errado.</div>
+              </li>
+              <li>
+                <span class="deliverables-check" aria-hidden="true">✓</span>
+                <div data-i18n-html="aca_li3_html"><strong>Escopo Fechado de Projeto-Piloto:</strong> desenho técnico de baixo risco e alto impacto, sem obrigação de continuidade.</div>
+              </li>
+            </ul>
+
+            <button type="button" class="btn btn--primary" data-prefill-topic="Diagnóstico ACATECH" data-i18n="aca_cta">
+              Solicitar Escopo do Diagnóstico ACATECH
+            </button>
+          </div>
+
+          <figure class="editorial-figure reveal-item">
+            <picture>
+              <source srcset="assets/images/solution-governance-acatech.webp" type="image/webp" />
+              <img
+                src="assets/images/solution-governance-acatech.png"
+                alt="Mesa executiva de comando e governança industrial representando a progressão de maturidade digital ACATECH e rastreabilidade normativa ISO"
+                data-i18n-alt="aca_img_alt"
+                class="editorial-figure__img"
+                loading="lazy"
+                decoding="async"
+                width="1376"
+                height="768"
+              />
+            </picture>
+            <figcaption class="editorial-figure__caption">
+              <span data-i18n-html="aca_fig_html"><strong>Espinha Dorsal SmartInovaT:</strong> 1. Diagnóstico → 2. Conexão → 3. Inteligência → 4. Governança</span>
+              <span class="norm-chip">ACATECH Index</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Container Oficial do Módulo @infographics-engineer -->
+        <div id="infographic-axes-acatech" class="peer-module-slot"></div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- 5B. BLOCO B — CONECTIVIDADE CHÃO DE FÁBRICA + VISÃO COMPUTACIONAL & IA PREDITIVA -->
+    <section class="section" id="conectividade-ia" aria-labelledby="conectividade-heading">
+      <div class="container">
+        <header class="section-header reveal-item">
+          <div class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            <span data-i18n="conn_eyebrow">AS DUAS PONTAS RESOLVIDAS PELA MESMA ENGENHARIA</span>
+          </div>
+          <h2 class="section-title" id="conectividade-heading" data-i18n-html="conn_title_html">
+            Conectividade de Chão de Fábrica &amp; <span class="text-spectrum">Inteligência Aplicada</span>
+          </h2>
+          <p class="section-lead" data-i18n="conn_lead">
+            Enquanto integradores tradicionais param na coleta do sinal elétrico e consultorias digitais esperam receber planilhas prontas, a SmartInovaT projeta a ponte física na máquina e a camada algorítmica que transforma telemetria em previsibilidade operacional.
+          </p>
+        </header>
+
+        <div class="dual-solutions-grid">
+          <article class="solution-showcase-card reveal-item">
+            <div class="solution-showcase-card__media">
+              <picture>
+                <source srcset="assets/images/solution-iot-connectivity.webp" type="image/webp" />
+                <img
+                  src="assets/images/solution-iot-connectivity.png"
+                  alt="Máquinas industriais conectadas por sensores sem fio, telemetria IoT e redes LPWAN integradas diretamente ao ERP corporativo"
+                  data-i18n-alt="conn_img1_alt"
+                  loading="lazy"
+                  decoding="async"
+                  width="1376"
+                  height="768"
+                />
+              </picture>
+              <span class="solution-showcase-card__badge" data-i18n="conn_card1_badge">EIXO 02 • MUNDO FÍSICO → DIGITAL</span>
+            </div>
+            <div class="solution-showcase-card__body">
+              <h3 class="solution-showcase-card__title" data-i18n="conn_card1_title">
+                IoT, M2M, LPWAN, Retrofitting CNC &amp; Integração Direta ao ERP
+              </h3>
+              <p class="solution-showcase-card__desc" data-i18n="conn_card1_desc">
+                O dado não pode morrer dentro do comando da máquina nem depender de apontamento em papel no fim do turno. Com base em quase 11 anos de monitoramento industrial sem fio e experiência real em retrofitting de centros de usinagem e tornos, conectamos parques fabris novos ou legados direto à nuvem e ao ERP.
+              </p>
+              <ul class="solution-specs">
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="conn_s1">Retrofitting de máquinas-ferramenta e CNC</span></li>
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="conn_s2">Monitoramento wireless em tempo real</span></li>
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="conn_s3">Redes industriais LPWAN de longo alcance</span></li>
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="conn_s4">Telemetria M2M para assistência remota</span></li>
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="conn_s5">Ponte direta Máquina–Sensor–ERP</span></li>
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="conn_s6">Logística industrial e registro em nuvem</span></li>
+              </ul>
+              <div class="solution-showcase-card__footer">
+                <span class="diff-card__tag" data-i18n="conn_card1_foot">Base: ~11 anos IoT/M2M + Implantação ERP Industrial</span>
+                <button type="button" class="btn btn--ghost btn--sm" data-prefill-topic="Conexão Máquina/ERP/IoT" data-i18n="conn_card1_cta">
+                  Avaliar Conectividade →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="solution-showcase-card solution-showcase-card--vision reveal-item">
+            <div class="solution-showcase-card__media">
+              <picture>
+                <source srcset="assets/images/solution-vision-ai.webp" type="image/webp" />
+                <img
+                  src="assets/images/solution-vision-ai.png"
+                  alt="Sistema óptico de visão computacional de alta precisão inspecionando componentes metálicos usinados com malha digital de detecção de anomalias"
+                  data-i18n-alt="conn_img2_alt"
+                  loading="lazy"
+                  decoding="async"
+                  width="1376"
+                  height="768"
+                />
+              </picture>
+              <span class="solution-showcase-card__badge" data-i18n="conn_card2_badge">EIXO 03 • DADO → DECISÃO &amp; AÇÃO</span>
+            </div>
+            <div class="solution-showcase-card__body">
+              <h3 class="solution-showcase-card__title" data-i18n="conn_card2_title">
+                Visão Computacional, Manutenção Preditiva &amp; Automação com IA
+              </h3>
+              <p class="solution-showcase-card__desc" data-i18n="conn_card2_desc">
+                Quando o dado flui com confiabilidade, estruturamos capacidades de engenharia de IA para atacar perdas reais: inspeção óptica automatizada em pontos onde a fadiga visual humana gera refugo, modelos preditivos sobre histórico de máquina para antecipar paradas e agentes inteligentes para processos repetitivos.
+              </p>
+              <ul class="solution-specs">
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="vis_s1">Inspeção óptica e controle de qualidade</span></li>
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="vis_s2">Manutenção preditiva sobre séries históricas</span></li>
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="vis_s3">Previsibilidade de produção e indicadores</span></li>
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="vis_s4">Automação de rotinas fabris e administrativas</span></li>
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="vis_s5">Agentes conversacionais de atendimento 24/7</span></li>
+                <li><span class="spec-dot" aria-hidden="true"></span><span data-i18n="vis_s6">Estúdios generativos de vídeo, voz e ensino</span></li>
+              </ul>
+              <div class="solution-showcase-card__footer">
+                <span class="diff-card__tag" data-i18n="conn_card2_foot">Capacidade de Engenharia + Software Próprio</span>
+                <button type="button" class="btn btn--ghost btn--sm" data-prefill-topic="IA Aplicada/Automação" data-i18n="conn_card2_cta">
+                  Discutir Aplicação de IA →
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- 5C. BLOCO C — CATÁLOGO INTERATIVO POR NECESSIDADE -->
+    <section class="section section--alt" id="catalogo-dores" aria-labelledby="dores-heading">
+      <div class="container">
+        <header class="section-header reveal-item">
+          <div class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            <span data-i18n="pain_eyebrow">ORIENTAÇÃO AO PROBLEMA • COMECE PELA REALIDADE DA SUA OPERAÇÃO</span>
+          </div>
+          <h2 class="section-title" id="dores-heading" data-i18n-html="pain_title_html">
+            Catálogo por Necessidade: <span class="text-metallic">Da Dor Operacional à Solução</span>
+          </h2>
+          <p class="section-lead" data-i18n="pain_lead">
+            Você não precisa saber qual protocolo ou modelo de IA contratar — basta reconhecer onde sua operação perde eficiência, margem ou segurança hoje. Clique na dor mais próxima do seu cenário para visualizar a arquitetura recomendada e as provas correspondentes.
+          </p>
+        </header>
+
+        <div id="infographic-pain-diagnostic" class="peer-module-slot"></div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- 5D. BLOCO D — ARQUITETURA TECNOLÓGICA COMPLETA -->
+    <section class="section" id="arquitetura" aria-labelledby="arquitetura-heading">
+      <div class="container">
+        <header class="section-header reveal-item">
+          <div class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            <span data-i18n="arch_eyebrow">MAPA DE TECNOLOGIAS VERIFICADO EM CAMPO E EM CÓDIGO</span>
+          </div>
+          <h2 class="section-title" id="arquitetura-heading" data-i18n-html="arch_title_html">
+            Arquitetura Tecnológica <span class="text-spectrum">Ponta-a-Ponta</span>
+          </h2>
+          <p class="section-lead" data-i18n="arch_lead">
+            Inspeção transparente das 6 camadas tecnológicas operadas pela SmartInovaT — unindo sensores e retrofitting no chão de fábrica a React/Next.js, identidade federada Keycloak, containers isolados e normas internacionais de governança.
+          </p>
+        </header>
+
+        <div id="infographic-architecture-stack" class="peer-module-slot"></div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- 5E. BLOCO E — GOVERNANÇA EXECUTIVA (ISO 56002 & ISO 42001) & SOLUÇÕES SOB CONSULTA -->
+    <section class="section section--alt" id="governanca" aria-labelledby="governanca-heading">
+      <div class="container">
+        <header class="section-header reveal-item">
+          <div class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            <span data-i18n="gov_eyebrow">SEGURANÇA PARA A ALTA GESTÃO • INOVAÇÃO CONTÍNUA &amp; IA RESPONSÁVEL</span>
+          </div>
+          <h2 class="section-title" id="governanca-heading" data-i18n-html="gov_title_html">
+            Governança <span class="text-metallic">ISO 56002 &amp; ISO 42001</span> e Formatos de Atuação
+          </h2>
+          <p class="section-lead" data-i18n="gov_lead">
+            Tecnologia sem governança gera dependência de “pessoas iluminadas” ou risco jurídico e operacional com uso sombra de IA. Estruturamos o processo decisório da sua empresa e oferecemos 5 formatos claros de contratação — do diagnóstico avulso de escopo fechado ao software sob medida.
+          </p>
+        </header>
+
+        <div id="infographic-governance-formats" class="peer-module-slot"></div>
+
+        <!-- Bloco Oficial "Sua necessidade não está nesta lista?" -->
+        <div class="bespoke-banner reveal-item">
+          <div class="bespoke-banner__content">
+            <div class="eyebrow">
+              <span class="eyebrow__dot" aria-hidden="true"></span>
+              <span data-i18n="bespoke_eyebrow">ENGENHARIA DE SOLUÇÕES SOB CONSULTA</span>
+            </div>
+            <h3 class="bespoke-banner__title" data-i18n-html="bespoke_title_html">
+              Sua necessidade não está nesta lista? <span class="text-spectrum">Traga o problema — não precisa trazer a solução.</span>
+            </h3>
+            <p class="bespoke-banner__text" data-i18n-html="bespoke_text_html">
+              As nove aplicações que operamos nasceram todas de uma necessidade que não existia em prateleira. Nenhuma delas é adaptação de produto de terceiro: foram projetadas, construídas e colocadas em produção pela SmartInovaT, em domínios sem nenhuma relação entre si — indústria, produtividade, saúde, educação, música, mercado financeiro e atendimento. Se o seu desafio envolve <strong>dado, processo ou decisão</strong>, ele cabe nessa conversa.
+            </p>
+            <div>
+              <button type="button" class="btn btn--primary" data-prefill-topic="Desenvolvimento Sob Medida" data-i18n="bespoke_cta">
+                Conversar Sobre um Problema Específico
+              </button>
+            </div>
+          </div>
+          <div class="bespoke-banner__art">
+            <picture>
+              <source srcset="assets/images/brand-wave-split.webp" type="image/webp" />
+              <img
+                src="assets/images/brand-wave-split.jpg"
+                alt="Identidade visual SmartInovaT com feixes luminosos espectrais convergindo em eixo metálico vertical"
+                data-i18n-alt="bespoke_img_alt"
+                loading="lazy"
+                decoding="async"
+                width="1376"
+                height="768"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- 6. SEÇÃO DE CONTATO DIRETO + QUADRO POMERODE - SC COM MAPA -->
+    <section class="section" id="contato" aria-labelledby="contato-heading">
+      <div class="container">
+        <header class="section-header reveal-item">
+          <div class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            <span data-i18n="contact_eyebrow">CANAL EXECUTIVO DIRETO • SEM TRIAGEM BUROCRÁTICA</span>
+          </div>
+          <h2 class="section-title" id="contato-heading" data-i18n-html="contact_title_html">
+            Inicie uma Conversa Orientada ao <span class="text-spectrum">Seu Desafio</span>
+          </h2>
+          <p class="section-lead" data-i18n="contact_lead">
+            Selecione a frente prioritária e descreva resumidamente o contexto operacional na caixa abaixo para encaminhamento direto à liderança técnica da SmartInovaT.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal-item" id="contact-card">
+            <h3 class="contact-card__title" data-i18n="contact_card_title">Caixa de Contato Executivo</h3>
+            <p class="contact-card__subtitle" data-i18n="contact_card_sub">
+              Envie seu desafio operacional diretamente para análise técnica e estratégica da SmartInovaT.
+            </p>
+
+            <div class="corporate-email-box">
+              <div class="corporate-email-box__info">
+                <span class="corporate-email-box__label" data-i18n="contact_channel_label">Canal Direto Verificado</span>
+                <span class="corporate-email-box__status" data-i18n="contact_channel_status">Encaminhamento confidencial à Diretoria de Engenharia • Retorno prioritário</span>
+              </div>
+              <span class="norm-chip" data-i18n="contact_channel_chip">Envio Direto</span>
+            </div>
+
+            <form class="contact-form" id="smart-contact-form" novalidate>
+              <input type="text" name="_honey" id="contact-honey" class="sr-only" tabindex="-1" autocomplete="off" />
+
+              <div class="form-row-2">
+                <div class="form-field">
+                  <label class="form-label" for="contact-company"><span data-i18n="form_name_label">Nome &amp; Empresa / Setor</span> <span>*</span></label>
+                  <input type="text" class="form-control" id="contact-company" name="company" required placeholder="Seu nome e empresa (ex.: Metalmecânica, Têxtil...)" data-i18n-placeholder="form_name_ph" autocomplete="organization" />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="contact-return"><span data-i18n="form_return_label">E-mail ou Telefone de Retorno</span> <span>*</span></label>
+                  <input type="text" class="form-control" id="contact-return" name="returnContact" required placeholder="seu.email@empresa.com.br ou +55 (DDD) 9XXXX-XXXX" data-i18n-placeholder="form_return_ph" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="contact-topic" data-i18n="form_topic_label">Desafio / Eixo de Interesse</label>
+                <select class="form-control" id="contact-topic" name="topic">
+                  <option value="Diagnóstico ACATECH" data-i18n="opt_acatech">Diagnóstico ACATECH (Maturidade Indústria 4.0 &amp; Roadmap)</option>
+                  <option value="Conexão Máquina/ERP/IoT" data-i18n="opt_conn">Conexão Máquina / ERP / IoT, M2M &amp; Retrofitting</option>
+                  <option value="IA Aplicada/Automação" data-i18n="opt_ai">IA Aplicada, Visão Computacional &amp; Automação de Processos</option>
+                  <option value="Governança ISO 56002/42001" data-i18n="opt_gov">Governança Executiva (ISO 56002 / ISO 42001) &amp; Capacitação</option>
+                  <option value="Desenvolvimento Sob Medida" data-i18n="opt_custom">Desenvolvimento de Aplicação Web / IA Sob Medida</option>
+                </select>
+                <div class="topic-quick-pills">
+                  <button type="button" class="topic-pill is-active" data-topic-select="Diagnóstico ACATECH" data-i18n="pill_acatech">Diagnóstico ACATECH</button>
+                  <button type="button" class="topic-pill" data-topic-select="Conexão Máquina/ERP/IoT" data-i18n="pill_conn">Máquina + ERP / IoT</button>
+                  <button type="button" class="topic-pill" data-topic-select="IA Aplicada/Automação" data-i18n="pill_ai">IA &amp; Visão</button>
+                  <button type="button" class="topic-pill" data-topic-select="Governança ISO 56002/42001" data-i18n="pill_gov">ISO 56002 / 42001</button>
+                  <button type="button" class="topic-pill" data-topic-select="Desenvolvimento Sob Medida" data-i18n="pill_custom">Sob Medida</button>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="contact-message"><span data-i18n="form_msg_label">Qual problema você quer resolver?</span> <span>*</span></label>
+                <textarea
+                  class="form-control"
+                  id="contact-message"
+                  name="message"
+                  required
+                  placeholder="Conte de forma direta o cenário atual (ex.: parada de linha sem rastreamento, ERP desconectado das máquinas, necessidade de diagnóstico ACATECH ou projeto de software com IA)..."
+                  data-i18n-placeholder="form_msg_ph"
+                ></textarea>
+              </div>
+
+              <div class="contact-actions">
+                <button type="submit" class="btn btn--primary btn--full" id="send-email-btn">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                  <span id="send-email-btn-label" data-i18n="form_submit_btn">Enviar Mensagem à Engenharia</span>
+                </button>
+              </div>
+
+              <div class="contact-feedback" id="contact-feedback" role="status" aria-live="polite">
+                <span id="contact-feedback-text"></span>
+              </div>
+            </form>
+          </div>
+
+          <!-- Quadro de Localização Pomerode — Santa Catarina -->
+          <aside class="location-card reveal-item" aria-labelledby="pomerode-heading">
+            <div class="location-badge">
+              <span class="map-pin-dot" aria-hidden="true"></span>
+              <span data-i18n="loc_badge">Base &amp; Presença no Polo Industrial Catarinense</span>
+            </div>
+
+            <h3 class="location-card__title" id="pomerode-heading" data-i18n="loc_title">Pomerode — Santa Catarina, Brasil</h3>
+            <p class="location-card__region" data-i18n="loc_region">Coração Industrial do Vale Europeu (SC) • Atendimento Nacional &amp; Internacional</p>
+            <p class="location-card__desc" data-i18n-html="loc_desc_html">
+              Estrategicamente posicionada em <strong>Pomerode — Santa Catarina</strong>, referência nacional em tradição industrial alemã, metalmecânica de precisão, têxtil, polímeros e automação no Vale Europeu. Atuamos presencialmente e remotamente em plantas industriais e operações corporativas em todo o território brasileiro e no exterior.
+            </p>
+
+            <div class="map-frame-wrap" id="pomerode-map-wrap">
+              <iframe
+                class="map-iframe"
+                title="Mapa interativo de localização da SmartInovaT em Pomerode — Santa Catarina"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-49.2220%2C-26.7740%2C-49.1310%2C-26.7070&amp;layer=mapnik&amp;marker=-26.7406%2C-49.1764"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div class="map-overlay-bar">
+                <span class="map-coords">
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span>Pomerode, SC • 26°44'S 49°10'W</span>
+                </span>
+                <div class="map-actions">
+                  <button type="button" class="map-btn-mini" id="map-theme-toggle" data-i18n="map_contrast_btn">
+                    Contraste Mapa
+                  </button>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Pomerode%2C+Santa+Catarina%2C+Brasil"
+                    target="_blank"
+                    rel="noopener"
+                    class="map-btn-mini"
+                    data-i18n="map_open_gmaps"
+                  >
+                    Abrir no Google Maps ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-meta-grid">
+              <div class="location-meta-item">
+                <span class="location-meta-item__k" data-i18n="loc_m1_k">Localização Estratégica</span>
+                <span class="location-meta-item__v" data-i18n="loc_m1_v">Pomerode — Santa Catarina</span>
+              </div>
+              <div class="location-meta-item">
+                <span class="location-meta-item__k" data-i18n="loc_m2_k">Atendimento Rápido</span>
+                <a href="https://wa.me/5585987875886" target="_blank" rel="noopener" class="location-meta-item__v">+55 85 98787 5886 ↗</a>
+              </div>
+              <div class="location-meta-item">
+                <span class="location-meta-item__k" data-i18n="loc_m3_k">Canal Corporativo</span>
+                <a href="#smart-contact-form" class="location-meta-item__v" data-i18n="loc_m3_v">Caixa Executiva Direta ↑</a>
+              </div>
+              <div class="location-meta-item">
+                <span class="location-meta-item__k" data-i18n="loc_m4_k">Alcance de Atuação</span>
+                <span class="location-meta-item__v" data-i18n="loc_m4_v">Brasil, América Latina, EUA &amp; Europa</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- 7. PERGUNTAS FREQUENTES EXECUTIVAS (FAQ + RICH SNIPPETS GLOBAIS) -->
+    <section class="section section--alt" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <header class="section-header section-header--center reveal-item">
+          <div class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            <span data-i18n="faq_eyebrow">RESPOSTAS DIRETAS PARA TOMADORES DE DECISÃO</span>
+          </div>
+          <h2 class="section-title" id="faq-heading" data-i18n-html="faq_title_html">
+            Perguntas Frequentes <span class="text-metallic">Executivas</span>
+          </h2>
+          <p class="section-lead" data-i18n="faq_lead">
+            Como estruturamos diagnósticos, conectividade de parque fabril legado, governança de IA e projetos de software sob medida.
+          </p>
+        </header>
+
+        <div class="faq-list reveal-item">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <h3 class="faq-question__heading" data-i18n="faq1_q">Por onde começar quando a indústria ainda não tem máquinas conectadas nem indicadores confiáveis?</h3>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </summary>
+            <div class="faq-answer" data-i18n-html="faq1_a_html">
+              Pelo <a href="#eixos-acatech">Diagnóstico de Maturidade Digital ACATECH</a> de escopo fechado. Em vez de adquirir sensores ou licenças isoladas no escuro, avaliamos os 6 estágios da operação em campo, mapeamos onde o dado morre hoje e entregamos um <strong>roadmap priorizado por retorno financeiro (ROI)</strong> junto à especificação de um projeto-piloto de baixo risco.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3 class="faq-question__heading" data-i18n="faq2_q">É possível conectar centros de usinagem CNC e máquinas legadas ao ERP sem substituir o maquinário?</h3>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </summary>
+            <div class="faq-answer" data-i18n-html="faq2_a_html">
+              Sim. Combinando experiência prática em <a href="#conectividade-ia">retrofitting de máquinas-ferramenta, telemetria M2M e redes LPWAN / IoT</a>, coletamos dados operacionais em tempo real diretamente de equipamentos legados e os integramos à nuvem e ao ERP corporativo.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3 class="faq-question__heading" data-i18n="faq3_q">Qual a diferença da SmartInovaT frente a consultorias tradicionais e fábricas de software?</h3>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </summary>
+            <div class="faq-answer" data-i18n-html="faq3_a_html">
+              A SmartInovaT é uma empresa de nova geração construída sobre <a href="#qualificacoes">mais de 30 anos de expertise industrial real</a> — incluindo unidades de 850 t/mês e 1.500 t/mês, linhas alemãs e 100% da usinagem de tambores de freio para caminhões pesados — aliada à engenharia própria demonstrada nas <a href="#portfolio">9 aplicações web com IA</a> integradas nesta vitrine.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3 class="faq-question__heading" data-i18n="faq4_q">O que minha organização recebe na prática com a governança ISO 56002 e ISO 42001?</h3>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </summary>
+            <div class="faq-answer" data-i18n-html="faq4_a_html">
+              Na seção de <a href="#governanca">Governança ISO 56002 &amp; ISO 42001</a>, estruturamos a inovação como sistema contínuo auditável (ISO 56002) e estabelecemos políticas, gestão de risco e rastreabilidade executiva para uso responsável de Inteligência Artificial (ISO 42001).
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3 class="faq-question__heading" data-i18n="faq5_q">A SmartInovaT desenvolve aplicações web e agentes de IA para outros setores além da manufatura?</h3>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </summary>
+            <div class="faq-answer" data-i18n-html="faq5_a_html">
+              Sim. Nosso <a href="#portfolio">portfólio de 9 aplicações</a> abrange produtividade por processos, capacitação corporativa gamificada, atendimento comercial no WhatsApp, estúdio de vídeo com avatar digital, engenharia quantitativa em tempo real, identidade federada Keycloak, saúde e renderização vetorial. Descreva seu cenário na <a href="#contato">Caixa de Contato Executivo</a>.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. FOOTER INSTITUCIONAL PREMIUM -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-card">
+          <div class="footer-brand-img-wrap">
+            <picture>
+              <source srcset="assets/images/brand-wave-horizontal.webp" type="image/webp" />
+              <img
+                src="assets/images/brand-wave-horizontal.jpg"
+                alt="Logotipo institucional SmartInovaT Soluções Empresariais com onda espectral sobre eixo metálico"
+                loading="lazy"
+                decoding="async"
+                width="310"
+                height="174"
+              />
+            </picture>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer_desc">
+            Empresa de nova geração apoiada em +30 anos de expertise industrial real: dados de chão de fábrica do mundo físico para o mundo lógico, software próprio com IA em produção e governança executiva.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-col__title" data-i18n="footer_col1">Navegação Executiva</h3>
+          <ul class="footer-links">
+            <li><a href="#qualificacoes" data-i18n="f_link_qual">Qualificações &amp; +30 Anos de Expertise</a></li>
+            <li><a href="#portfolio" data-i18n="f_link_port">Portfólio Vivo (9 Demos Integradas)</a></li>
+            <li><a href="#eixos-acatech" data-i18n="f_link_axes">Os 4 Eixos &amp; Diagnóstico ACATECH</a></li>
+            <li><a href="#conectividade-ia" data-i18n="f_link_conn">IoT, Retrofitting CNC &amp; Visão IA</a></li>
+            <li><a href="#catalogo-dores" data-i18n="f_link_pain">Catálogo por Necessidade Operacional</a></li>
+            <li><a href="#arquitetura" data-i18n="f_link_arch">Arquitetura de 6 Camadas</a></li>
+            <li><a href="#governanca" data-i18n="f_link_gov">Governança ISO 56002 &amp; ISO 42001</a></li>
+            <li><a href="#faq" data-i18n="f_link_faq">Perguntas Frequentes (FAQ)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col__title" data-i18n="footer_col2">Demos Interativas</h3>
+          <ul class="footer-links">
+            <li><button type="button" data-open-portfolio="produthivia">ProduthivIA — Diagnóstico por Processos</button></li>
+            <li><button type="button" data-open-portfolio="capacittai">CapacittAI — Treinamento Corporativo IA</button></li>
+            <li><button type="button" data-open-portfolio="presenthia">Presenthia — Atendimento IA WhatsApp</button></li>
+            <li><button type="button" data-open-portfolio="eckkoai">Eckko AI — Estúdio de Vídeo com Avatar</button></li>
+            <li><button type="button" data-open-portfolio="strikeflow3">StrikeFlow3 — Engenharia em Tempo Real</button></li>
+            <li><button type="button" data-open-portfolio="edumaxia">EduMaxia — Portal Federado Keycloak</button></li>
+            <li><a href="#portfolio" data-i18n="f_link_all_apps">Ver todas as 9 aplicações →</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col__title" data-i18n="footer_col3">Contato &amp; Alcance Global</h3>
+          <ul class="footer-links">
+            <li><a href="#pomerode-heading" data-i18n="f_loc">Pomerode — Santa Catarina, Brasil</a></li>
+            <li><a href="#contato" data-i18n="f_contact_box">Caixa de Contato Executivo</a></li>
+            <li><a href="en/" data-i18n="f_alt_lang_link" data-alt-lang-href="true">English Version (Global) ↗</a></li>
+            <li><button type="button" data-prefill-topic="Diagnóstico ACATECH" data-i18n="f_book_aca">Agendar Diagnóstico ACATECH</button></li>
+            <li><button type="button" id="open-consent-settings" data-i18n="f_privacy_prefs">Preferências de Privacidade &amp; Cookies</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_copy">© 2026 SmartInovaT Soluções Empresariais • www.smartinovat.com • Pomerode — SC, Brasil.</span>
+        <div class="footer-norms">
+          <span class="norm-chip">ACATECH Maturity Index</span>
+          <span class="norm-chip">ISO 56002</span>
+          <span class="norm-chip">ISO 42001</span>
+          <span class="norm-chip">ISO 9001 &amp; 14000</span>
+          <span class="norm-chip">Industry 4.0</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BARRA DISCRETA DE CONSENTIMENTO DE PRIVACIDADE (CANTO INFERIOR ESQUERDO — GOOGLE CONSENT MODE V2 / LGPD / GDPR) -->
+  <aside class="consent-banner" id="cookie-consent-banner" aria-label="Preferências de privacidade e cookies">
+    <h3 class="consent-banner__title" data-i18n="consent_title">Privacidade &amp; Métricas (LGPD / GDPR)</h3>
+    <p class="consent-banner__text" data-i18n="consent_text">
+      Utilizamos cookies essenciais de funcionamento e, mediante sua autorização, métricas analíticas e de publicidade (Google Consent Mode v2) para aprimorar sua experiência executiva.
+    </p>
+    <div class="consent-banner__actions">
+      <button type="button" class="consent-btn consent-btn--accept" id="consent-accept-btn" data-i18n="consent_accept">Aceitar Todos</button>
+      <button type="button" class="consent-btn consent-btn--essential" id="consent-essential-btn" data-i18n="consent_essential">Apenas Essenciais</button>
+    </div>
+  </aside>
+
+  <!-- BOTÃO FIXO NA LATERAL INFERIOR DIREITA — WHATSAPP (+55 85 98787 5886) -->
+  <a
+    href="https://wa.me/5585987875886?text=Ol%C3%A1%2C%20vim%20pelo%20site%20www.smartinovat.com%20e%20gostaria%20de%20falar%20com%20a%20SmartInovaT."
+    class="whatsapp-float"
+    id="whatsapp-float-btn"
+    target="_blank"
+    rel="noopener"
+    aria-label="Falar diretamente pelo WhatsApp +55 85 98787 5886"
+  >
+    <span class="whatsapp-float__tooltip" role="tooltip" data-i18n="wa_tooltip">WhatsApp Direto • +55 85 98787 5886</span>
+    <svg class="whatsapp-float__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.031 2c-5.516 0-9.998 4.486-10 10.004a9.97 9.97 0 0 0 1.491 5.263L2 22l4.888-1.448a9.978 9.978 0 0 0 5.14 1.417h.004c5.515 0 9.997-4.486 9.999-10.004A9.963 9.963 0 0 0 19.104 4.93 9.946 9.946 0 0 0 12.031 2zm5.826 14.122c-.245.691-1.425 1.321-1.988 1.406-.508.076-1.152.108-1.86-.117-.43-.136-.98-.319-1.686-.624-2.969-1.281-4.907-4.274-5.055-4.472-.148-.197-1.207-1.606-1.207-3.063 0-1.457.763-2.173 1.034-2.469.271-.296.591-.37.788-.37.197 0 .394.002.567.01.182.009.425-.069.665.508.246.593.837 2.049.911 2.197.074.148.123.321.025.518-.099.198-.148.321-.296.494-.148.173-.311.386-.444.518-.148.148-.302.309-.13.605.173.296.766 1.265 1.645 2.048 1.13 1.008 2.083 1.32 2.379 1.468.296.148.468.123.641-.074.173-.198.739-.864.936-1.16.197-.296.394-.247.665-.148.271.099 1.725.814 2.02.962.296.148.493.222.567.346.074.123.074.716-.171 1.407z" />
+    </svg>
+  </a>
+
+  <!-- Módulos Integrados no Final do Body -->
+  <script src="assets/js/portfolio-viewer.js"></script>
+  <script src="assets/js/infographics.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
