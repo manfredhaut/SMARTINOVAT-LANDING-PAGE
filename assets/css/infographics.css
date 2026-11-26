@@ -196,7 +196,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 1px;
   background: var(--si-spectrum);
   opacity: 0.94;
   pointer-events: none;
@@ -226,6 +226,31 @@
   user-select: none;
 }
 
+/* Legenda "Como ler" logo abaixo de cada diagrama */
+.si-ig-read {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0.8rem 0 1.4rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--si-text-secondary);
+}
+
+.si-ig-read-tag {
+  flex-shrink: 0;
+  margin-top: 0.12rem;
+  padding: 0.16rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--si-cyan) 36%, transparent);
+  font-family: var(--si-font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--si-cyan);
+  white-space: nowrap;
+}
+
 /* ---------- Header & Badges ---------- */
 .si-ig-header {
   display: flex;
@@ -246,7 +271,7 @@
   gap: 0.5rem;
   font-family: var(--si-font-mono);
   font-size: 0.73rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.11em;
   text-transform: uppercase;
   color: var(--eyebrow-color, var(--si-cyan));
@@ -269,7 +294,7 @@
 .si-ig-title {
   font-family: var(--si-font-display);
   font-size: clamp(1.22rem, 2.1vw, 1.68rem);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.24;
   color: var(--si-text-primary);
@@ -305,7 +330,7 @@
   gap: 0.85rem 1.1rem;
   background: var(--si-translation-bg);
   border: 1px solid color-mix(in srgb, var(--si-teal) 32%, transparent);
-  border-left: 3px solid var(--si-teal);
+  border-left: 1px solid var(--si-teal);
   border-radius: var(--si-radius-sm);
   padding: 0.85rem 1.1rem;
   margin-bottom: 1.35rem;
@@ -314,7 +339,7 @@
 .si-ig-translation-tag {
   font-family: var(--si-font-mono);
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--si-amber);
@@ -355,7 +380,7 @@
   padding: 0.52rem 0.95rem;
   font-family: var(--si-font-sans);
   font-size: 0.84rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition:
     background 0.22s var(--si-ease),
@@ -395,7 +420,7 @@
 .si-ig-pill.is-active .si-ig-pill-num {
   background: var(--pill-accent, var(--si-cyan));
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 :root:not([data-theme="light"]) .si-ig-pill.is-active .si-ig-pill-num {
@@ -418,7 +443,7 @@
   gap: 0.48rem;
   font-family: var(--si-font-sans);
   font-size: 0.83rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   padding: 0.6rem 1rem;
   border-radius: 9px;
@@ -445,7 +470,7 @@
   background: linear-gradient(135deg, #1db7c4 0%, #429a8e 100%);
   color: #041016;
   border-color: transparent;
-  font-weight: 700;
+  font-weight: 500;
   box-shadow: 0 8px 22px rgba(29, 183, 196, 0.24);
 }
 
@@ -545,7 +570,7 @@
 .si-detail-card {
   background: var(--si-card-bg);
   border: 1px solid var(--si-border-subtle);
-  border-top: 2px solid var(--card-accent, var(--si-cyan));
+  border-top: 1px solid var(--card-accent, var(--si-cyan));
   border-radius: var(--si-radius-md);
   padding: 1.15rem 1.2rem;
   display: flex;
@@ -556,7 +581,7 @@
 .si-detail-kicker {
   font-family: var(--si-font-mono);
   font-size: 0.71rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   color: var(--card-accent, var(--si-cyan));
@@ -566,7 +591,7 @@
 .si-detail-heading {
   font-family: var(--si-font-display);
   font-size: 1.02rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--si-text-primary);
   margin: 0 0 0.55rem;
   line-height: 1.35;
@@ -650,7 +675,7 @@
   display: block;
   font-family: var(--si-font-mono);
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--stage-color, var(--si-cyan));
   margin-bottom: 0.2rem;
 }
@@ -658,7 +683,7 @@
 .si-stage-btn-name {
   display: block;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.25;
 }
 
@@ -697,7 +722,7 @@
   padding: 0.75rem 0.95rem;
   background: var(--si-card-bg);
   border: 1px solid var(--si-border-subtle);
-  border-left: 3px solid var(--layer-color, var(--si-cyan));
+  border-left: 1px solid var(--layer-color, var(--si-cyan));
   border-radius: var(--si-radius-sm);
   color: var(--si-text-secondary);
   cursor: pointer;
@@ -721,7 +746,7 @@
 .si-arch-layer-code {
   font-family: var(--si-font-mono);
   font-size: 0.73rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--layer-color, var(--si-cyan));
   background: var(--si-pill-num-bg);
   padding: 0.25rem 0.5rem;
@@ -731,7 +756,7 @@
 .si-arch-layer-title {
   font-family: var(--si-font-display);
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
   color: inherit;
   display: block;
 }
@@ -863,7 +888,7 @@
 .si-pain-code {
   font-family: var(--si-font-mono);
   font-size: 0.69rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--pain-accent, var(--si-cyan));
@@ -881,7 +906,7 @@
 .si-pain-quote {
   font-family: var(--si-font-display);
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.38;
   margin: 0;
   color: inherit;
@@ -914,7 +939,7 @@
 .si-route-step-label {
   font-family: var(--si-font-mono);
   font-size: 0.69rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--step-accent, var(--si-cyan));
@@ -953,7 +978,7 @@
 .si-gov-card {
   background: var(--si-card-bg);
   border: 1px solid var(--si-border-subtle);
-  border-top: 3px solid var(--gov-accent, var(--si-teal));
+  border-top: 1px solid var(--gov-accent, var(--si-teal));
   border-radius: var(--si-radius-md);
   padding: 1.25rem;
   transition: border-color 0.25s var(--si-ease), box-shadow 0.25s var(--si-ease);
@@ -975,7 +1000,7 @@
 .si-gov-norm-badge {
   font-family: var(--si-font-mono);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #ffffff;
   background: var(--gov-accent, var(--si-teal));
   padding: 0.26rem 0.65rem;
@@ -1024,7 +1049,7 @@
   display: block;
   font-family: var(--si-font-mono);
   font-size: 0.68rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 0.22rem;
@@ -1077,7 +1102,7 @@
 .si-format-num {
   font-family: var(--si-font-mono);
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--fmt-color, var(--si-amber));
   display: block;
   margin-bottom: 0.25rem;
@@ -1086,7 +1111,7 @@
 .si-format-name {
   font-family: var(--si-font-display);
   font-size: 0.86rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.28;
   display: block;
   margin-bottom: 0.25rem;
@@ -1176,6 +1201,17 @@
 
   .si-ig-helper-hint {
     white-space: normal;
+  }
+
+  /* Diagramas largos: mantêm tamanho legível e rolam na horizontal dentro do quadro */
+  .si-ig-canvas-box {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .si-ig-svg--wide {
+    min-width: 700px;
   }
 }
 

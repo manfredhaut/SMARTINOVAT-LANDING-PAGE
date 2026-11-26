@@ -158,6 +158,26 @@ textarea {
   color: var(--text-primary);
 }
 
+/* Refinamento tipográfico: ênfase em peso médio, nunca negrito pesado */
+strong,
+b {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+/* Ícones de linha: traço fino e uniforme em todo o site */
+svg[fill="none"][stroke="currentColor"] {
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* Skip Link for Accessibility */
 .skip-link {
   position: absolute;
@@ -167,7 +187,7 @@ textarea {
   padding: 10px 18px;
   background: var(--accent-cyan);
   color: #041016;
-  font-weight: 700;
+  font-weight: 500;
   border-radius: var(--radius-sm);
 }
 
@@ -231,7 +251,7 @@ textarea {
   border: 1px solid var(--border-highlight);
   font-family: var(--font-mono);
   font-size: 0.73rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--accent-cyan-ink);
@@ -251,7 +271,7 @@ textarea {
   margin: 0 0 18px;
   font-family: var(--font-display);
   font-size: clamp(1.9rem, 3.3vw, 2.85rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.16;
   letter-spacing: -0.025em;
   color: var(--text-primary);
@@ -282,7 +302,7 @@ textarea {
    1. Top Spectral Ribbon + Glassmorphic Header + Lang/Theme Controls
    ========================================================================== */
 .spectrum-bar {
-  height: 3px;
+  height: 1px;
   width: 100%;
   background: var(--gradient-spectrum);
   position: relative;
@@ -397,16 +417,35 @@ textarea {
   stroke: #334155;
 }
 
+/* Logomarca aprovada (fitas + nome metalizado), recortada da arte original */
+.brand-logo__mark-img {
+  width: auto;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.brand-logo__name-img {
+  display: block;
+  height: 30px;
+  width: auto;
+  max-width: none;
+}
+
+:root[data-theme="light"] .brand-logo__name-img {
+  filter: brightness(0.3) contrast(1.15);
+}
+
 .brand-logo__text {
   display: flex;
   flex-direction: column;
+  align-items: center;
   line-height: 1.05;
 }
 
 .brand-logo__wordmark {
   font-family: var(--font-display);
   font-size: 1.28rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: -0.02em;
   background: var(--gradient-metallic);
   -webkit-background-clip: text;
@@ -421,6 +460,9 @@ textarea {
   text-transform: uppercase;
   color: var(--text-muted);
   margin-top: 3px;
+  /* centralizado sob o nome; o recuo compensa o espaçamento após a última letra */
+  text-align: center;
+  padding-left: 0.13em;
 }
 
 /* Navigation */
@@ -435,7 +477,7 @@ textarea {
   padding: 8px 10px;
   border-radius: var(--radius-xs);
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-secondary);
   white-space: nowrap;
   transition: color 0.2s ease, background 0.2s ease;
@@ -453,7 +495,7 @@ textarea {
   left: 10px;
   right: 10px;
   bottom: 3px;
-  height: 2px;
+  height: 1px;
   border-radius: 2px;
   background: var(--gradient-spectrum);
 }
@@ -465,7 +507,7 @@ textarea {
   border-radius: 999px;
   font-family: var(--font-mono);
   font-size: 0.67rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--accent-cyan-ink);
   background: rgba(29, 183, 196, 0.12);
   border: 1px solid rgba(29, 183, 196, 0.28);
@@ -495,7 +537,7 @@ textarea {
   background: transparent;
   font-family: var(--font-mono);
   font-size: 0.71rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.04em;
   color: var(--text-secondary);
   cursor: pointer;
@@ -559,7 +601,7 @@ textarea {
   border-radius: var(--radius-sm);
   font-family: var(--font-display);
   font-size: 0.92rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.01em;
   cursor: pointer;
   border: 1px solid transparent;
@@ -687,7 +729,7 @@ textarea {
   border: 1px solid rgba(29, 183, 196, 0.35);
   font-family: var(--font-mono);
   font-size: 0.71rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.08em;
   color: var(--text-metallic);
   margin-bottom: 22px;
@@ -698,7 +740,7 @@ textarea {
   margin: 0 0 22px;
   font-family: var(--font-display);
   font-size: clamp(2.25rem, 4.1vw, 3.55rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.09;
   letter-spacing: -0.03em;
   color: var(--text-primary);
@@ -720,7 +762,7 @@ textarea {
   left: 0;
   top: 14px;
   bottom: 14px;
-  width: 3px;
+  width: 1px;
   border-radius: 4px;
   background: var(--gradient-spectrum);
 }
@@ -728,14 +770,14 @@ textarea {
 .hero__positioning-quote {
   margin: 0;
   font-size: 1.04rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.65;
   color: var(--text-primary);
 }
 
 .hero__positioning-quote strong {
   color: var(--text-primary);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .hero__subcopy {
@@ -807,7 +849,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.18);
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #f3f6fa;
 }
 
@@ -841,12 +883,12 @@ textarea {
   align-items: center;
   gap: 7px;
   color: var(--text-metallic);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .bridge-line {
   flex: 1;
-  height: 2px;
+  height: 1px;
   background: var(--gradient-spectrum);
   border-radius: 2px;
   position: relative;
@@ -880,7 +922,7 @@ textarea {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 1px;
   background: var(--gradient-spectrum);
   opacity: 0.6;
   transition: opacity 0.25s ease;
@@ -898,7 +940,7 @@ textarea {
 .metric-card__value {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.1vw, 2rem);
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1.1;
   margin-bottom: 8px;
@@ -982,7 +1024,7 @@ textarea {
 .diff-card__tag {
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
@@ -992,7 +1034,7 @@ textarea {
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.3;
   color: var(--text-primary);
 }
@@ -1029,7 +1071,7 @@ textarea {
   margin: 6px 0 0;
   font-family: var(--font-display);
   font-size: 1.55rem;
-  font-weight: 800;
+  font-weight: 500;
   color: var(--text-primary);
 }
 
@@ -1050,7 +1092,7 @@ textarea {
   background: transparent;
   font-family: var(--font-mono);
   font-size: 0.76rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-secondary);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -1110,7 +1152,7 @@ textarea {
 .timeline-item__period {
   font-family: var(--font-mono);
   font-size: 0.76rem;
-  font-weight: 700;
+  font-weight: 500;
   padding: 3px 10px;
   border-radius: 999px;
   background: rgba(29, 183, 196, 0.12);
@@ -1141,7 +1183,7 @@ textarea {
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.03rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-primary);
   line-height: 1.32;
 }
@@ -1182,7 +1224,7 @@ textarea {
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.12rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-primary);
 }
 
@@ -1210,7 +1252,7 @@ textarea {
   background: var(--bg-inset);
   border: 1px solid var(--border-subtle);
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-secondary);
   transition: all 0.2s ease;
 }
@@ -1225,7 +1267,7 @@ textarea {
   border-color: rgba(29, 183, 196, 0.34);
   color: var(--text-metallic);
   background: rgba(29, 183, 196, 0.08);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* ==========================================================================
@@ -1371,7 +1413,7 @@ textarea {
   border: 1px solid rgba(29, 183, 196, 0.45);
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #5eead4;
 }
 
@@ -1392,7 +1434,7 @@ textarea {
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.38rem;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.25;
   color: var(--text-primary);
 }
@@ -1467,7 +1509,7 @@ textarea {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 1px;
   background: var(--gradient-spectrum);
   z-index: 2;
 }
@@ -1484,7 +1526,7 @@ textarea {
   margin: 0;
   font-family: var(--font-display);
   font-size: clamp(1.55rem, 2.5vw, 2.15rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.2;
   color: var(--text-primary);
 }
@@ -1552,7 +1594,7 @@ textarea {
   margin: 0 0 8px;
   font-family: var(--font-display);
   font-size: 1.48rem;
-  font-weight: 800;
+  font-weight: 500;
   color: var(--text-primary);
 }
 
@@ -1584,7 +1626,7 @@ textarea {
 .corporate-email-box__label {
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--accent-cyan-ink);
@@ -1592,7 +1634,7 @@ textarea {
 
 .corporate-email-box__status {
   font-size: 0.87rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-metallic);
 }
 
@@ -1617,12 +1659,12 @@ textarea {
 
 .form-label {
   font-size: 0.83rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-metallic);
 }
 
 .form-label span {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--accent-cyan-ink);
   font-size: 0.8rem;
 }
@@ -1652,7 +1694,7 @@ textarea {
 
 select.form-control {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231db7c4' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231db7c4' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 40px;
@@ -1686,7 +1728,7 @@ textarea.form-control {
   background: rgba(29, 183, 196, 0.14);
   border-color: rgba(29, 183, 196, 0.48);
   color: var(--text-primary);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .contact-actions {
@@ -1737,7 +1779,7 @@ textarea.form-control {
   border: 1px solid rgba(236, 169, 76, 0.4);
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--accent-amber-ink);
@@ -1810,7 +1852,7 @@ textarea.form-control {
   font-family: var(--font-mono);
   font-size: 0.71rem;
   color: var(--text-metallic);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .map-pin-dot {
@@ -1835,7 +1877,7 @@ textarea.form-control {
   border: 1px solid var(--border-highlight);
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--accent-cyan-ink);
   cursor: pointer;
 }
@@ -1871,7 +1913,7 @@ textarea.form-control {
 
 .location-meta-item__v {
   font-size: 0.84rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-metallic);
 }
 
@@ -1908,7 +1950,7 @@ textarea.form-control {
   cursor: pointer;
   font-family: var(--font-display);
   font-size: 1.04rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-primary);
   user-select: none;
 }
@@ -1925,7 +1967,7 @@ textarea.form-control {
 
 .faq-answer a {
   color: var(--accent-cyan-ink);
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -2009,7 +2051,7 @@ textarea.form-control {
   margin: 0 0 16px;
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #dce3ec;
@@ -2097,7 +2139,7 @@ textarea.form-control {
   position: absolute;
   inset: -5px;
   border-radius: 50%;
-  border: 2px solid rgba(37, 211, 102, 0.45);
+  border: 1px solid rgba(37, 211, 102, 0.45);
   animation: waPulse 2.6s infinite ease-out;
   pointer-events: none;
 }
@@ -2137,7 +2179,7 @@ textarea.form-control {
   color: #f3f6fa;
   font-family: var(--font-mono);
   font-size: 0.74rem;
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
@@ -2198,7 +2240,7 @@ textarea.form-control {
   margin: 0;
   font-family: var(--font-display);
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-primary);
   display: flex;
   align-items: center;
@@ -2223,7 +2265,7 @@ textarea.form-control {
   border-radius: var(--radius-xs);
   font-family: var(--font-display);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
   border: 1px solid var(--border-highlight);
   transition: all 0.18s ease;
@@ -2442,6 +2484,14 @@ html.js-ready .reveal-item.is-visible {
 
   .brand-logo__wordmark {
     font-size: 1.08rem;
+  }
+
+  .brand-logo__mark-img {
+    height: 40px;
+  }
+
+  .brand-logo__name-img {
+    height: 23px;
   }
 
   .brand-logo__sub {

@@ -186,7 +186,7 @@
   position: absolute;
   inset: 0 auto auto 0;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background: var(--sp-spectrum);
   opacity: 0.9;
 }
@@ -206,7 +206,7 @@
   border-radius: 999px;
   font-family: var(--sp-font-mono);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--sp-pill-text);
@@ -237,7 +237,7 @@
 
 .sp-summary-strip__note strong {
   color: var(--sp-text-metallic);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .sp-summary-strip__counter {
@@ -284,7 +284,7 @@
   color: var(--sp-text-secondary);
   font-family: var(--sp-font-sans);
   font-size: 0.83rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   padding: 9px 14px;
   border-radius: 999px;
@@ -323,7 +323,7 @@
   border-radius: 999px;
   font-family: var(--sp-font-mono);
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 500;
   background: var(--sp-count-bg);
   color: var(--sp-text-metallic);
 }
@@ -518,15 +518,23 @@
 }
 
 .sp-card__domain {
-  color: var(--sp-text-secondary);
+  color: var(--sp-text-metallic);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+.sp-card__domain-tag {
+  margin-left: auto;
+  padding-left: 8px;
+  color: var(--sp-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .sp-summary-strip__anchor {
   color: var(--sp-cyan);
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   border-bottom: 1px dashed rgba(29, 183, 196, 0.45);
   transition: color 0.18s ease, border-color 0.18s ease;
@@ -540,7 +548,7 @@
 .sp-frame-shell__domain-ext {
   color: var(--sp-cyan);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .sp-frame-shell__domain-ext:hover {
@@ -550,22 +558,22 @@
 .sp-card__index {
   font-family: var(--sp-font-mono);
   font-size: 0.69rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--sp-text-muted);
   flex-shrink: 0;
 }
 
-/* Browser Mockup Visual Stage */
+/* Browser Mockup Visual Stage — identidade à esquerda, ilustração emoldurada à direita */
 .sp-card__viewport {
   position: relative;
-  height: 148px;
-  padding: 16px 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  min-height: 152px;
+  padding: 20px 18px 20px 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 128px;
+  align-items: center;
+  gap: 16px;
   background:
-    radial-gradient(120% 100% at 88% 12%, rgba(var(--app-accent-rgb), 0.22) 0%, rgba(var(--app-accent-rgb), 0) 62%),
-    radial-gradient(90% 90% at 10% 100%, rgba(var(--app-accent-rgb), 0.12) 0%, transparent 65%),
+    radial-gradient(120% 100% at 92% 10%, rgba(var(--app-accent-rgb), 0.16) 0%, rgba(var(--app-accent-rgb), 0) 60%),
     var(--sp-viewport-base);
   overflow: hidden;
 }
@@ -578,69 +586,99 @@
     linear-gradient(var(--sp-grid-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--sp-grid-line) 1px, transparent 1px);
   background-size: 22px 22px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.78), transparent 95%);
-  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.78), transparent 95%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 95%);
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 95%);
   pointer-events: none;
 }
 
-.sp-card__graphic {
-  position: absolute;
-  right: 10px;
-  bottom: 8px;
-  width: 176px;
-  height: 110px;
-  opacity: 0.88;
-  pointer-events: none;
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
-}
-
-.sp-card:hover .sp-card__graphic {
-  transform: scale(1.05) translate(-2px, -2px);
-  opacity: 1;
-}
-
-.sp-card__viewport-top {
+.sp-card__identity {
   position: relative;
   z-index: 2;
+  min-width: 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
 }
 
 .sp-axis-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 10px;
+  max-width: 100%;
+  padding: 3px 9px;
   border-radius: 999px;
-  font-size: 0.71rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  color: var(--sp-text-primary);
-  background: rgba(var(--app-accent-rgb), 0.16);
-  border: 1px solid rgba(var(--app-accent-rgb), 0.44);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  color: var(--sp-text-metallic);
+  background: rgba(var(--app-accent-rgb), 0.1);
+  border: 1px solid rgba(var(--app-accent-rgb), 0.36);
 }
 
 .sp-axis-badge::before {
   content: '';
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--app-accent);
-  box-shadow: 0 0 8px var(--app-accent);
+  flex-shrink: 0;
+}
+
+.sp-card__title {
+  margin: 0;
+  font-size: 1.38rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--sp-text-primary);
+  overflow-wrap: anywhere;
+}
+
+.sp-card__tagline {
+  margin: 0;
+  font-family: 'Inter', var(--sp-font-sans);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--sp-tagline-color);
+}
+
+.sp-card__art {
+  position: relative;
+  z-index: 2;
+  width: 128px;
+  padding: 5px;
+  border-radius: 10px;
+  background: var(--sp-svg-panel);
+  border: 1px solid rgba(var(--app-accent-rgb), 0.26);
+  transition: border-color 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sp-card:hover .sp-card__art {
+  border-color: rgba(var(--app-accent-rgb), 0.6);
+  transform: translateY(-2px);
+}
+
+.sp-card__graphic {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
 }
 
 .sp-card__hover-cue {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 4px 9px;
+  padding: 3px 8px;
   border-radius: 999px;
   font-family: var(--sp-font-mono);
-  font-size: 0.67rem;
+  font-size: 0.64rem;
   color: var(--sp-text-metallic);
   background: var(--sp-cue-bg);
   border: 1px solid var(--sp-cue-border);
@@ -654,26 +692,15 @@
   transform: translateY(0);
 }
 
-.sp-card__identity {
-  position: relative;
-  z-index: 2;
-  max-width: 72%;
-}
+@media (max-width: 360px) {
+  .sp-card__viewport {
+    grid-template-columns: minmax(0, 1fr);
+  }
 
-.sp-card__title {
-  margin: 0 0 3px;
-  font-size: 1.32rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--sp-text-primary);
-  text-shadow: var(--sp-title-shadow);
-}
-
-.sp-card__tagline {
-  margin: 0;
-  font-family: var(--sp-font-mono);
-  font-size: 0.72rem;
-  color: var(--sp-tagline-color);
+  .sp-card__art {
+    width: 100%;
+    max-width: 200px;
+  }
 }
 
 /* Card Executive Body */
@@ -696,14 +723,14 @@
   padding: 10px 12px;
   border-radius: var(--sp-radius-sm);
   background: var(--sp-pain-bg);
-  border-left: 2px solid var(--app-accent);
+  border-left: 1px solid var(--app-accent);
 }
 
 .sp-card__label {
   display: block;
   font-family: var(--sp-font-mono);
   font-size: 0.67rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--sp-text-muted);
@@ -729,7 +756,7 @@
   padding: 3px 8px;
   border-radius: 6px;
   font-size: 0.72rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--sp-text-secondary);
   background: var(--sp-chip-bg);
   border: 1px solid var(--sp-chip-border);
@@ -754,29 +781,28 @@
 
 .sp-card__proof-text {
   margin: 0;
-  font-family: var(--sp-font-mono);
-  font-size: 0.73rem;
-  line-height: 1.45;
+  font-family: 'Inter', var(--sp-font-sans);
+  font-size: 0.78rem;
+  line-height: 1.5;
   color: var(--sp-text-secondary);
 }
 
 .sp-card__proof-text strong {
   color: var(--sp-text-metallic);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Card Action Buttons */
 .sp-card__actions {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 9px;
   padding: 0 20px 20px;
 }
 
-@media (max-width: 420px) {
-  .sp-card__actions {
-    grid-template-columns: 1fr;
-  }
+.sp-card__actions .sp-btn {
+  flex: 1 1 130px;
+  min-width: 0;
 }
 
 .sp-btn {
@@ -789,7 +815,7 @@
   border-radius: 10px;
   font-family: var(--sp-font-sans);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   text-decoration: none;
   cursor: pointer;
@@ -920,7 +946,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 1px;
   background: var(--sp-spectrum);
   z-index: 5;
 }
@@ -967,7 +993,7 @@
 .sp-modal__title {
   margin: 0;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 500;
   color: var(--sp-text-primary);
   white-space: nowrap;
 }
@@ -1017,7 +1043,7 @@
   color: var(--sp-text-secondary);
   font-family: var(--sp-font-sans);
   font-size: 0.77rem;
-  font-weight: 600;
+  font-weight: 500;
   padding: 6px 11px;
   border-radius: 7px;
   cursor: pointer;
@@ -1063,7 +1089,7 @@
   padding: 8px 13px;
   border-radius: 9px;
   font-size: 0.79rem;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
   color: var(--sp-text-primary);
   background: linear-gradient(
@@ -1154,7 +1180,7 @@
   margin: 0;
   font-family: var(--sp-font-mono);
   font-size: 0.68rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--sp-text-muted);
@@ -1172,7 +1198,7 @@
   border-radius: 10px;
   background: var(--sp-pain-bg);
   border: 1px solid var(--sp-border-subtle);
-  border-left: 3px solid var(--modal-accent);
+  border-left: 1px solid var(--modal-accent);
   font-size: 0.82rem;
   line-height: 1.5;
   color: var(--sp-text-secondary);
@@ -1208,7 +1234,7 @@
   color: var(--sp-text-primary);
   font-family: var(--sp-font-sans);
   font-size: 0.81rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -1268,7 +1294,7 @@
   width: 390px;
   max-width: 100%;
   border-radius: 26px;
-  border: 2px solid var(--sp-border-highlight);
+  border: 1px solid var(--sp-border-highlight);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.42);
 }
 
@@ -1352,7 +1378,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 2px solid var(--sp-border-subtle);
+  border: 1.5px solid var(--sp-border-subtle);
   border-top-color: var(--modal-accent);
   border-right-color: var(--sp-teal);
   animation: spSpin 0.85s linear infinite;
@@ -1364,7 +1390,7 @@
 
 .sp-loader__bar {
   width: 180px;
-  height: 3px;
+  height: 2px;
   border-radius: 999px;
   background: var(--sp-count-bg);
   overflow: hidden;

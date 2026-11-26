@@ -15,6 +15,7 @@
         ' — arquitetura de nova geração sustentada por +30 anos de expertise industrial real. ',
       stripAnchor: 'Solicitar projeto sob medida →',
       mockupBadge: 'Demo Interativa • Aplicação Mocada',
+      mockupShort: 'demo interativa',
       counterAll: '9 de 9 aplicações demonstrativas exibidas',
       counterFiltered: function (n) {
         return 'Exibindo ' + n + ' de 9 aplicações';
@@ -34,8 +35,8 @@
       painLabel: 'Dor Operacional Resolvida',
       modulesLabel: 'Módulos Demonstrados',
       proofStrong: 'Arquitetura & Prova Técnica:',
-      btnPreview: 'Abrir Preview Interativo',
-      btnFullPage: 'Abrir Página Completa ↗',
+      btnPreview: 'Abrir preview',
+      btnFullPage: 'Página completa ↗',
       navGroupAria: 'Navegar entre as 9 aplicações',
       prevBtn: 'Anterior',
       prevTitle: 'Aplicação anterior (Seta Esquerda)',
@@ -76,6 +77,7 @@
         ' — next-generation software architecture backed by 30+ years of real industrial expertise. ',
       stripAnchor: 'Request a custom solution →',
       mockupBadge: 'Interactive Mockup • Local Demo',
+      mockupShort: 'interactive demo',
       counterAll: 'Showing all 9 interactive application demos',
       counterFiltered: function (n) {
         return 'Showing ' + n + ' of 9 applications';
@@ -95,8 +97,8 @@
       painLabel: 'Operational Pain Solved',
       modulesLabel: 'Demonstrated Modules',
       proofStrong: 'Architecture & Technical Proof:',
-      btnPreview: 'Open Interactive Preview',
-      btnFullPage: 'Open Full Page ↗',
+      btnPreview: 'Open preview',
+      btnFullPage: 'Full page ↗',
       navGroupAria: 'Navigate across the 9 applications',
       prevBtn: 'Previous',
       prevTitle: 'Previous application (Left Arrow)',
@@ -681,7 +683,7 @@
           '<rect x="18" y="14" width="148" height="84" rx="8" stroke="var(--sp-svg-stroke)" fill="var(--sp-svg-panel)"/>' +
           '<line x1="92" y1="22" x2="92" y2="90" stroke="var(--sp-svg-stroke)" stroke-dasharray="3 3"/>' +
           '<line x1="28" y1="56" x2="156" y2="56" stroke="var(--sp-svg-stroke)" stroke-dasharray="3 3"/>' +
-          '<path d="M36 76 L68 58 L108 44 L142 28" stroke="' + accent + '" stroke-width="2" stroke-linecap="round"/>' +
+          '<path d="M36 76 L68 58 L108 44 L142 28" stroke="' + accent + '" stroke-width="1.2" stroke-linecap="round"/>' +
           '<circle cx="36" cy="76" r="4" fill="var(--sp-svg-muted-node)"/>' +
           '<circle cx="68" cy="58" r="4.5" fill="' + accent + '"/>' +
           '<circle cx="108" cy="44" r="5" fill="' + accent + '"/>' +
@@ -716,8 +718,8 @@
         return (
           '<svg class="sp-card__graphic" viewBox="0 0 180 110" fill="none" aria-hidden="true">' +
           '<rect x="22" y="14" width="138" height="62" rx="8" fill="var(--sp-svg-panel)" stroke="var(--sp-svg-stroke)"/>' +
-          '<circle cx="91" cy="40" r="13" stroke="' + accent + '" stroke-width="2"/>' +
-          '<path d="M74 66 C78 56, 104 56, 108 66" stroke="' + accent + '" stroke-width="2" stroke-linecap="round"/>' +
+          '<circle cx="91" cy="40" r="13" stroke="' + accent + '" stroke-width="1.2"/>' +
+          '<path d="M74 66 C78 56, 104 56, 108 66" stroke="' + accent + '" stroke-width="1.2" stroke-linecap="round"/>' +
           '<rect x="22" y="83" width="138" height="12" rx="6" fill="var(--sp-svg-fill-soft)" stroke="var(--sp-svg-stroke)"/>' +
           '<rect x="24" y="85" width="82" height="8" rx="4" fill="' + accent + '"/>' +
           '<circle cx="106" cy="89" r="5" fill="var(--sp-svg-ink)"/>' +
@@ -726,23 +728,23 @@
       case 'quant':
         return (
           '<svg class="sp-card__graphic" viewBox="0 0 180 110" fill="none" aria-hidden="true">' +
-          '<path d="M16 86 L42 70 L66 75 L92 46 L118 54 L144 26 L166 32" stroke="' + accent + '" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>' +
+          '<path d="M16 86 L42 70 L66 75 L92 46 L118 54 L144 26 L166 32" stroke="' + accent + '" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>' +
           '<path d="M16 86 L42 70 L66 75 L92 46 L118 54 L144 26 L166 32 L166 96 L16 96 Z" fill="' + accent + '" fill-opacity="0.16"/>' +
-          '<line x1="42" y1="58" x2="42" y2="82" stroke="#429a8e" stroke-width="3"/>' +
-          '<line x1="92" y1="34" x2="92" y2="62" stroke="#429a8e" stroke-width="3"/>' +
-          '<line x1="118" y1="42" x2="118" y2="68" stroke="#c63368" stroke-width="3"/>' +
-          '<line x1="144" y1="16" x2="144" y2="42" stroke="#429a8e" stroke-width="3"/>' +
+          '<line x1="42" y1="58" x2="42" y2="82" stroke="#429a8e" stroke-width="1.6"/>' +
+          '<line x1="92" y1="34" x2="92" y2="62" stroke="#429a8e" stroke-width="1.6"/>' +
+          '<line x1="118" y1="42" x2="118" y2="68" stroke="#c63368" stroke-width="1.6"/>' +
+          '<line x1="144" y1="16" x2="144" y2="42" stroke="#429a8e" stroke-width="1.6"/>' +
           '</svg>'
         );
       case 'federated':
         return (
           '<svg class="sp-card__graphic" viewBox="0 0 180 110" fill="none" aria-hidden="true">' +
-          '<circle cx="54" cy="55" r="18" fill="rgba(29,183,196,0.16)" stroke="' + accent + '" stroke-width="2"/>' +
-          '<rect x="48" y="51" width="12" height="10" rx="2" stroke="var(--sp-svg-ink)" stroke-width="1.6"/>' +
-          '<path d="M50 51 V47 A4 4 0 0 1 58 47 V51" stroke="var(--sp-svg-ink)" stroke-width="1.6"/>' +
-          '<line x1="72" y1="50" x2="118" y2="28" stroke="var(--sp-svg-stroke-strong)" stroke-width="1.6"/>' +
-          '<line x1="72" y1="55" x2="118" y2="55" stroke="' + accent + '" stroke-width="1.8"/>' +
-          '<line x1="72" y1="60" x2="118" y2="82" stroke="var(--sp-svg-stroke-strong)" stroke-width="1.6"/>' +
+          '<circle cx="54" cy="55" r="18" fill="rgba(29,183,196,0.16)" stroke="' + accent + '" stroke-width="1.2"/>' +
+          '<rect x="48" y="51" width="12" height="10" rx="2" stroke="var(--sp-svg-ink)" stroke-width="1"/>' +
+          '<path d="M50 51 V47 A4 4 0 0 1 58 47 V51" stroke="var(--sp-svg-ink)" stroke-width="1"/>' +
+          '<line x1="72" y1="50" x2="118" y2="28" stroke="var(--sp-svg-stroke-strong)" stroke-width="1"/>' +
+          '<line x1="72" y1="55" x2="118" y2="55" stroke="' + accent + '" stroke-width="1.1"/>' +
+          '<line x1="72" y1="60" x2="118" y2="82" stroke="var(--sp-svg-stroke-strong)" stroke-width="1"/>' +
           '<rect x="118" y="19" width="44" height="18" rx="5" fill="var(--sp-svg-fill-soft)" stroke="var(--sp-svg-stroke)"/>' +
           '<rect x="118" y="46" width="44" height="18" rx="5" fill="rgba(29,183,196,0.2)" stroke="' + accent + '"/>' +
           '<rect x="118" y="73" width="44" height="18" rx="5" fill="var(--sp-svg-fill-soft)" stroke="var(--sp-svg-stroke)"/>' +
@@ -751,9 +753,9 @@
       case 'wellness':
         return (
           '<svg class="sp-card__graphic" viewBox="0 0 180 110" fill="none" aria-hidden="true">' +
-          '<circle cx="96" cy="54" r="36" stroke="var(--sp-svg-stroke)" stroke-width="5"/>' +
-          '<circle cx="96" cy="54" r="36" stroke="' + accent + '" stroke-width="5" stroke-dasharray="165 70" stroke-linecap="round"/>' +
-          '<path d="M68 56 H84 L91 41 L101 69 L108 52 H124" stroke="var(--sp-svg-ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+          '<circle cx="96" cy="54" r="36" stroke="var(--sp-svg-stroke)" stroke-width="2"/>' +
+          '<circle cx="96" cy="54" r="36" stroke="' + accent + '" stroke-width="2" stroke-dasharray="165 70" stroke-linecap="round"/>' +
+          '<path d="M68 56 H84 L91 41 L101 69 L108 52 H124" stroke="var(--sp-svg-ink)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>' +
           '</svg>'
         );
       case 'harmony':
@@ -763,7 +765,7 @@
           '<line x1="18" y1="45" x2="164" y2="45" stroke="var(--sp-svg-stroke)"/>' +
           '<line x1="18" y1="60" x2="164" y2="60" stroke="var(--sp-svg-stroke)"/>' +
           '<line x1="18" y1="75" x2="164" y2="75" stroke="var(--sp-svg-stroke)"/>' +
-          '<path d="M22 68 Q56 20 92 54 T162 38" stroke="' + accent + '" stroke-width="2.4" fill="none"/>' +
+          '<path d="M22 68 Q56 20 92 54 T162 38" stroke="' + accent + '" stroke-width="1.3" fill="none"/>' +
           '<circle cx="58" cy="45" r="5" fill="' + accent + '"/>' +
           '<circle cx="106" cy="60" r="5" fill="#1db7c4"/>' +
           '<circle cx="142" cy="30" r="5" fill="#c63368"/>' +
@@ -779,7 +781,7 @@
           '<line x1="16" y1="68" x2="166" y2="68" stroke="var(--sp-svg-stroke)"/>' +
           '<line x1="16" y1="78" x2="166" y2="78" stroke="var(--sp-svg-stroke)"/>' +
           '<line x1="16" y1="88" x2="166" y2="88" stroke="var(--sp-svg-stroke)"/>' +
-          '<line x1="94" y1="16" x2="94" y2="96" stroke="' + accent + '" stroke-width="2"/>' +
+          '<line x1="94" y1="16" x2="94" y2="96" stroke="' + accent + '" stroke-width="1.2"/>' +
           '<circle cx="46" cy="36" r="4.2" fill="var(--sp-svg-ink)"/>' +
           '<circle cx="72" cy="26" r="4.2" fill="' + accent + '"/>' +
           '<circle cx="118" cy="46" r="4.2" fill="#1db7c4"/>' +
@@ -857,7 +859,10 @@
       '<div class="sp-card__urlbar">' +
       '<svg class="sp-card__lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>' +
       '<span class="sp-card__domain">' +
-      escapeHtml(app.name + ' • ' + dict.mockupBadge) +
+      escapeHtml(app.name) +
+      '</span>' +
+      '<span class="sp-card__domain-tag">' +
+      escapeHtml(dict.mockupShort) +
       '</span>' +
       '</div>' +
       '<span class="sp-card__index">' +
@@ -865,16 +870,10 @@
       '</span>' +
       '</div>' +
       '<div class="sp-card__viewport">' +
-      getAppGraphicSvg(app.graphicType, app.accent) +
-      '<div class="sp-card__viewport-top">' +
+      '<div class="sp-card__identity">' +
       '<span class="sp-axis-badge">' +
       escapeHtml(copy.axis) +
       '</span>' +
-      '<span class="sp-card__hover-cue">' +
-      escapeHtml(dict.liveCue) +
-      '</span>' +
-      '</div>' +
-      '<div class="sp-card__identity">' +
       '<h3 class="sp-card__title">' +
       escapeHtml(app.name) +
       '</h3>' +
@@ -882,6 +881,12 @@
       escapeHtml(copy.tagline) +
       '</p>' +
       '</div>' +
+      '<div class="sp-card__art">' +
+      getAppGraphicSvg(app.graphicType, app.accent) +
+      '</div>' +
+      '<span class="sp-card__hover-cue">' +
+      escapeHtml(dict.liveCue) +
+      '</span>' +
       '</div>' +
       '</div>' +
       '<div class="sp-card__body">' +
