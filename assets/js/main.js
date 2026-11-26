@@ -268,7 +268,7 @@
       bespoke_title_html: 'Sua necessidade não está nesta lista? <span class="text-spectrum">Traga o problema — não precisa trazer a solução.</span>',
       bespoke_text_html: 'As nove aplicações que desenvolvemos nasceram todas de uma necessidade que não existia em prateleira. Nenhuma delas é adaptação de produto de terceiro: foram projetadas e codificadas pela SmartInovaT em setores sem nenhuma relação entre si — indústria, produtividade, saúde, educação, música, mercado financeiro e atendimento. Se o seu desafio envolve <strong>dado, processo ou decisão</strong>, ele cabe nessa conversa.',
       bespoke_cta: 'Conversar Sobre um Problema Específico',
-      bespoke_img_alt: 'Identidade visual SmartInovaT com feixes luminosos espectrais convergindo em eixo metálico vertical',
+      bespoke_img_alt: 'Gestor explica um problema da operação em um quadro de vidro enquanto uma engenheira consultora escuta e anota, com o chão de fábrica ao fundo',
 
       contact_eyebrow: 'CANAL EXECUTIVO DIRETO • SEM TRIAGEM BUROCRÁTICA',
       contact_title_html: 'Inicie uma Conversa Orientada ao <span class="text-spectrum">Seu Desafio</span>',
@@ -541,7 +541,7 @@
       bespoke_title_html: 'Don’t see your exact case listed? <span class="text-spectrum">Bring the problem — you don’t need to bring the solution.</span>',
       bespoke_text_html: 'Every single one of the nine applications we engineered was born from a real-world need that off-the-shelf software could not solve. None is a third-party adaptation: all were architected and coded by SmartInovaT across unrelated sectors — manufacturing, productivity, healthcare, education, music, financial markets, and customer operations. If your challenge involves <strong>data, process, or decisions</strong>, it belongs in this conversation.',
       bespoke_cta: 'Discuss a Custom Engineering Challenge',
-      bespoke_img_alt: 'SmartInovaT visual identity with spectral light waves converging into a vertical brushed titanium axis',
+      bespoke_img_alt: 'A plant manager explains an operational problem on a glass board while a consulting engineer listens and takes notes, with the shop floor in the background',
 
       contact_eyebrow: 'DIRECT EXECUTIVE CHANNEL • ZERO SALES GATEKEEPING',
       contact_title_html: 'Start a Conversation Around <span class="text-spectrum">Your Challenge</span>',
